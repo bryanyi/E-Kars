@@ -1,0 +1,18 @@
+.Services-page .image img {
+  /* width: 70%; */
+  display: block;
+  max-width: 500px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+}
+
+.Services-page .description {
+  text-align: center;
+}
+
+.Services-page .description .para {
+  text-align: start;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}

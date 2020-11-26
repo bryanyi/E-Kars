@@ -1,0 +1,25 @@
+.Navbar-container .search-input {
+  width: 65%;
+}
+
+.Navbar-main {
+  flex-wrap: nowrap;
+  padding-right: 2em;
+  padding-left: 2em;
+  background-color: #00adb5;
+}
+
+.Navbar-brand {
+  cursor: pointer;
+  color: white !important;
+}
+
+.Navbar-brand img {
+  width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+  .Navbar-brand {
+    display: none;
+  }
+}

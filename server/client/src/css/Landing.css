@@ -1,0 +1,20 @@
+.Landing-page {
+  height: 100%;
+  width: 100%;
+}
+
+.Landing-page #hero {
+  height: 100vh;
+}
+.Landing-page .desc {
+  text-align: center;
+  margin: auto auto;
+}
+
+.Landing-page .description h1 {
+  font-size: 5rem;
+}
+
+.Landing-page .featured img {
+  width: 50rem;
+}

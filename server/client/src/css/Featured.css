@@ -1,0 +1,52 @@
+.Featured .featured-text {
+  background-color: #222831;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .Featured .featured-picture img {
+  width: 100%;
+} */
+
+.Featured .featured-divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.Featured .featured-divider h1 {
+  font-size: 3em;
+}
+
+.Featured .featured-divider h1::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 825px;
+  right: 0;
+  width: 8%;
+  border-top: 4px solid #00adb5;
+  z-index: -1;
+}
+
+.Featured .featured-car span {
+  color: red;
+}
+.Featured .featured-car-desc {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  margin-top: 1.5rem;
+}
+
+.Featured .btn {
+  margin-top: 5rem;
+}
+
+.Featured .btn a {
+  color: white;
+  text-decoration: none;
+}
