@@ -9,11 +9,13 @@ import Orders from "./components/Orders";
 import Account from "./components/Account";
 import Saved from "./components/Saved";
 import Brands from "./components/Brands";
+import Products from "./components/Products";
 import "./css/App.css";
 
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
+    this.props.fetchProducts();
   }
 
   render() {
@@ -30,6 +32,7 @@ class App extends Component {
               <Route path="/orders" exact component={Orders} />
               <Route path="/account" exact component={Account} />
               <Route path="/Saved" exact component={Saved} />
+              <Route path="/products" exact component={Products} />
             </Switch>
           </div>
         </Router>

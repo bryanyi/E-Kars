@@ -11,6 +11,7 @@ import {
 
 import { useHistory } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { connect } from "react-redux";
 
 const NavBar = () => {
   const history = useHistory();
@@ -20,6 +21,17 @@ const NavBar = () => {
   const navigateToCart = () => navigateTo("/cart");
   const navigateToAccount = () => navigateTo("/account");
   const navigateToSaved = () => navigateTo("/saved");
+
+  const searchField = (e) => {
+    e.preventDefault();
+    const navigateToProducts = () => navigateTo("/products");
+    // if and only if data exists, navigate to Products component
+    if (this.props.products) {
+      navigateToProducts();
+    }
+
+    // filter products
+  };
 
   return (
     <div className="Navbar-container">
@@ -37,6 +49,7 @@ const NavBar = () => {
             type="text"
             placeholder="Search"
             className="mr-sm-2 search-input"
+            onChange={searchField}
           />
           <Button variant="outline-light">Search</Button>
         </Form>
@@ -66,4 +79,8 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+const mapStateToProps = (state) => {
+  return { products: state.products };
+};
+
+export default connect(mapStateToProps)(NavBar);

@@ -7,9 +7,9 @@
   justify-content: center;
 }
 
-/* .Featured .featured-picture img {
-  width: 100%;
-} */
+.Featured .featured-picture img {
+  max-width: 100%;
+}
 
 .Featured .featured-divider {
   display: flex;
