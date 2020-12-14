@@ -2,19 +2,19 @@
   background-color: #393e46;
 }
 
-ul {
+.Brands ul {
   display: flex;
   justify-content: space-around;
   height: 1.5rem;
 }
 
-ul li {
+.Brands ul li {
   list-style: none;
   cursor: pointer;
   color: white;
   transition: 0.5s;
 }
 
-ul li:hover {
+.Brands ul li:hover {
   color: #00adb5;
 }

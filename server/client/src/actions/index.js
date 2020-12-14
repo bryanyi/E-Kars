@@ -16,6 +16,6 @@ export const fetchProducts = () => async (dispatch) => {
 
   dispatch({
     type: "FETCH_PRODUCTS",
-    payload: res,
+    payload: res.data,
   });
 };

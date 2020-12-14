@@ -4,16 +4,12 @@ import { connect } from "react-redux";
 class Products extends Component {
   productList() {
     return this.props.cars.map((car) => {
-      return <h1>{car.car}</h1>;
+      return (
+        <li key={car.id}>
+          {car.car} <img src={car.image} alt={car.car} />
+        </li>
+      );
     });
-
-    // return this.props.cars.map((car) => {
-    //   return (
-    //     <li key={car.id}>
-    //       {car.car} {car.image}
-    //     </li>
-    //   );
-    // });
   }
 
   render() {
@@ -23,8 +19,6 @@ class Products extends Component {
 
     return (
       <div>
-        {console.log("this is the this.props.cars typeOf:")}
-        {console.log(typeof this.props.cars)}
         <ul>{this.productList()}</ul>
       </div>
     );
