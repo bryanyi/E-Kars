@@ -12,6 +12,8 @@ export const fetchUser = () => async (dispatch) => {
 export const fetchProducts = () => async (dispatch) => {
   const res = await axios.get("/api/products");
 
+  console.log(res);
+
   dispatch({
     type: "FETCH_PRODUCTS",
     payload: res,

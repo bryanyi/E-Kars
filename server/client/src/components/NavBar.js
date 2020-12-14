@@ -26,9 +26,7 @@ const NavBar = () => {
     e.preventDefault();
     const navigateToProducts = () => navigateTo("/products");
     // if and only if data exists, navigate to Products component
-    if (this.props.products) {
-      navigateToProducts();
-    }
+    navigateToProducts();
 
     // filter products
   };

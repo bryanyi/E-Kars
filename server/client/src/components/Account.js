@@ -4,7 +4,7 @@ export default class Account extends Component {
   render() {
     return (
       <div>
-        <h1>Your Account</h1>
+        <h1>Your Account Hello</h1>
       </div>
     );
   }
