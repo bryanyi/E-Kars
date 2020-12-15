@@ -10,6 +10,7 @@ import Account from "./components/Account";
 import Saved from "./components/Saved";
 import Brands from "./components/Brands";
 import Products from "./components/Products";
+import Footer from "./components/Footer";
 import "./css/App.css";
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
             </Switch>
           </div>
         </Router>
+        <Footer />
       </div>
     );
   }

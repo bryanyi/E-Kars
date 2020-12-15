@@ -49,7 +49,9 @@ const NavBar = () => {
             className="mr-sm-2 search-input"
             onChange={searchField}
           />
-          <Button variant="outline-light">Search</Button>
+          <Button variant="outline-light" onClick={searchField}>
+            Search
+          </Button>
         </Form>
         <Navbar.Collapse id="responsive-navbar-nav" className="order-2">
           <Nav className="ml-auto">

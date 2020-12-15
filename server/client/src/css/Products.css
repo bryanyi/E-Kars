@@ -1,0 +1,57 @@
+.Products-Comp {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.Products-Comp .side-bar {
+  background-color: #eeeeee;
+}
+
+.Products-Comp .car-images {
+  height: 200px;
+}
+
+.Products-Comp .car-images img {
+  max-width: 350px;
+  max-height: 600px;
+}
+
+.Products-Comp .CarsDisplay {
+  /* margin: auto; */
+  display: grid;
+}
+
+@media screen and (min-width: 786px) {
+  .Products-Comp .CarsDisplay {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Products-Comp .car-info {
+  margin: 2rem auto;
+  transition: 0.5s;
+}
+
+.Products-Comp .car-info .cart-button {
+  display: flex;
+  justify-content: center;
+}
+
+.Products-Comp .car-info .cart-button button {
+  background-color: #00adb5;
+  border: 0.5px solid #eee;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: white;
+  margin-top: 1 em;
+}
+
+.Products-Comp .car-name {
+  text-align: center;
+}
+
+.Products-Comp .car-sale-info {
+  display: flex;
+  justify-content: space-around;
+  color: #00adb5;
+}

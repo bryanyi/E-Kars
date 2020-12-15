@@ -3,7 +3,6 @@ import { Col, Row } from "react-bootstrap";
 import FeaturedImage from "../images/white_tesla.png";
 import Featured from "../components/Featured";
 import Services from "../components/Services";
-import Footer from "../components/Footer";
 
 import "../css/Landing.css";
 
@@ -29,7 +28,6 @@ const Landing = () => {
       </div>
       <Services />
       <Featured />
-      <Footer />
     </>
   );
 };
