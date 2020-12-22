@@ -1,23 +1,37 @@
 .Products-Comp {
+  background-color: #eee;
   display: grid;
   grid-template-columns: 15% 85%;
+  grid-gap: 1em;
 }
 
 .Products-Comp .side-bar {
-  background-color: #eeeeee;
+  background-color: white;
+}
+
+.Products-Comp .car-info {
+  background-color: white;
+  padding: 2em;
+  width: 90%;
+}
+
+.Products-Comp .car-info:hover {
+  box-shadow: 12px 12px 2px 1px hsla(209, 100%, 50%, 0.445);
 }
 
 .Products-Comp .car-images {
-  height: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .Products-Comp .car-images img {
   max-width: 350px;
-  max-height: 600px;
+  height: 190px;
+  margin-bottom: 2rem;
 }
 
 .Products-Comp .CarsDisplay {
-  /* margin: auto; */
+  margin: 0 1em;
   display: grid;
 }
 
@@ -43,7 +57,7 @@
   padding: 0.5em;
   border-radius: 0.5em;
   color: white;
-  margin-top: 1 em;
+  margin-top: 1.5em;
 }
 
 .Products-Comp .car-name {
@@ -54,4 +68,8 @@
   display: flex;
   justify-content: space-around;
   color: #00adb5;
+}
+
+.loading {
+  height: 100vh;
 }

@@ -19,3 +19,10 @@ export const fetchProducts = () => async (dispatch) => {
     payload: res.data,
   });
 };
+
+export const searchFilter = (input) => {
+  return {
+    type: "SEARCH_FILTER",
+    payload: input,
+  };
+};

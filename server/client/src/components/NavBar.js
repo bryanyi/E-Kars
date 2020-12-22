@@ -1,5 +1,5 @@
 import "../css/NavBar.css";
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Nav,
@@ -11,7 +11,8 @@ import {
 
 import { useHistory } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { connect } from "react-redux";
+import { searchFilter } from "../actions/index";
+import { useDispatch } from "react-redux";
 
 const NavBar = () => {
   const history = useHistory();
@@ -21,14 +22,15 @@ const NavBar = () => {
   const navigateToCart = () => navigateTo("/cart");
   const navigateToAccount = () => navigateTo("/account");
   const navigateToSaved = () => navigateTo("/saved");
+  const navigateToProducts = () => navigateTo("/products");
+
+  const [input, setInput] = useState("");
+  const dispatch = useDispatch();
 
   const searchField = (e) => {
     e.preventDefault();
-    const navigateToProducts = () => navigateTo("/products");
-    // if and only if data exists, navigate to Products component
-    navigateToProducts();
-
-    // filter products
+    setInput(e.target.value);
+    dispatch(searchFilter(input));
   };
 
   return (
@@ -48,8 +50,9 @@ const NavBar = () => {
             placeholder="Search"
             className="mr-sm-2 search-input"
             onChange={searchField}
+            value={input}
           />
-          <Button variant="outline-light" onClick={searchField}>
+          <Button variant="outline-light" onClick={navigateToProducts}>
             Search
           </Button>
         </Form>
@@ -79,8 +82,4 @@ const NavBar = () => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return { products: state.products };
-};
-
-export default connect(mapStateToProps)(NavBar);
+export default NavBar;
