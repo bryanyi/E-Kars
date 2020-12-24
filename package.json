@@ -4,9 +4,9 @@
   "description": "Used electric cars",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm start --prefix client",
+    "start": "node backend/index.js",
+    "server": "nodemon backend/index.js",
+    "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Bryan Yi",
