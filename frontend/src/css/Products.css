@@ -1,18 +1,22 @@
 .Products-Comp {
   background-color: #eee;
-  display: grid;
-  grid-template-columns: 15% 85%;
-  grid-gap: 1em;
 }
 
 .Products-Comp .side-bar {
   background-color: white;
 }
 
+.Products-Comp .side-column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .Products-Comp .car-info {
   background-color: white;
   padding: 2em;
   width: 90%;
+  margin: 0.7em auto;
+  border-radius: 0.9em;
 }
 
 .Products-Comp .car-info:hover {
@@ -30,19 +34,7 @@
   margin-bottom: 2rem;
 }
 
-.Products-Comp .CarsDisplay {
-  margin: 0 1em;
-  display: grid;
-}
-
-@media screen and (min-width: 786px) {
-  .Products-Comp .CarsDisplay {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .Products-Comp .car-info {
-  margin: 2rem auto;
   transition: 0.5s;
 }
 

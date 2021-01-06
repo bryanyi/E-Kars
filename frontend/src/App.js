@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "./actions/index";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchUser, fetchProducts } from "./actions/index";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
@@ -13,34 +13,32 @@ import Products from "./components/Products";
 import Footer from "./components/Footer";
 import "./css/App.css";
 
-class App extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-    this.props.fetchProducts();
-  }
+const App = () => {
+  const dispatch = useDispatch();
 
-  render() {
-    return (
-      <div className="App">
-        <Router>
-          <div>
-            {/* Components and routes here */}
-            <NavBar />
-            <Brands />
-            <Switch>
-              <Route path="/" exact component={Landing} />
-              <Route path="/cart" exact component={Cart} />
-              <Route path="/orders" exact component={Orders} />
-              <Route path="/account" exact component={Account} />
-              <Route path="/Saved" exact component={Saved} />
-              <Route path="/products" exact component={Products} />
-            </Switch>
-          </div>
-        </Router>
-        <Footer />
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    dispatch(fetchUser());
+    dispatch(fetchProducts());
+  }, []);
 
-export default connect(null, actions)(App);
+  return (
+    <div className="App">
+      <Router>
+        <div>
+          <NavBar />
+          <Brands />
+          <Switch>
+            <Route path="/" exact component={Landing} />
+            <Route path="/cart" exact component={Cart} />
+            <Route path="/orders" exact component={Orders} />
+            <Route path="/account" exact component={Account} />
+            <Route path="/Saved" exact component={Saved} />
+            <Route path="/products" exact component={Products} />
+          </Switch>
+        </div>
+      </Router>
+      <Footer />
+    </div>
+  );
+};
+export default App;
