@@ -34,12 +34,17 @@
   margin-bottom: 2rem;
 }
 
+.Products-Comp .car-images img:hover {
+  cursor: pointer;
+}
+
 .Products-Comp .car-info {
   transition: 0.5s;
 }
 
 .Products-Comp .car-info .cart-button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -49,7 +54,18 @@
   padding: 0.5em;
   border-radius: 0.5em;
   color: white;
-  margin-top: 1.5em;
+  margin-top: 0.5em;
+  transition: 0.4s;
+}
+.Products-Comp .car-info .cart-button button a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+.Products-Comp .car-info .cart-button button:hover {
+  color: white;
+  background-color: #171717;
 }
 
 .Products-Comp .car-name {

@@ -1,20 +1,17 @@
+require("./models/User");
+require("./services/passport");
 const express = require("express");
 const passport = require("passport");
-const mongoose = require("mongoose");
 const cookie = require("cookie-session");
 const bodyParser = require("body-parser");
 const keys = require("./config/keys");
-require("./models/User");
-require("./services/passport");
+const productRoutes = require("./routes/productsRoutes");
+
+const connectDB = require("./config/db");
 
 const app = express();
 
-mongoose.connect(keys.mongoURI, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useFindAndModify: true,
-});
+connectDB();
 
 app.use(bodyParser.json());
 app.use(
@@ -26,9 +23,10 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.json());
+app.use("/api/products", productRoutes);
 
-require("./routes/authRoutes")(app);
-require("./routes/productsRoutes")(app);
+// require("./routes/authRoutes")(app);
 
 const PORT = process.env.PORT || 5000;
 

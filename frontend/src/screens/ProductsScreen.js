@@ -2,12 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Sidebar from "../components/Sidebar";
 import { Container, Col, Row } from "react-bootstrap";
-import Product from "./Product";
+import Product from "../components/Product";
 import "../css/Products.css";
 
 const Products = () => {
   let cars = useSelector((state) => state.products);
-  const searchInput = useSelector((state) => state.search);
 
   if (!cars) {
     return <h1 className="loading">LOADING CARS...</h1>;
@@ -28,7 +27,7 @@ const Products = () => {
               {cars.map((car) => {
                 return (
                   <Col md={12} lg={6} xl={4} key={car.id}>
-                    <Product car={car} />
+                    <Product key={car._id} car={car} />
                   </Col>
                 );
               })}

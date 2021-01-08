@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// AUTHENTICATION
 export const fetchUser = () => async (dispatch) => {
   const res = await axios.get("/api/current_user");
 
@@ -9,6 +10,7 @@ export const fetchUser = () => async (dispatch) => {
   });
 };
 
+// PRODUCT ACTIONS
 export const fetchProducts = () => async (dispatch) => {
   const res = await axios.get("/api/products");
 
@@ -20,9 +22,4 @@ export const fetchProducts = () => async (dispatch) => {
   });
 };
 
-export const searchFilter = (input) => {
-  return {
-    type: "SEARCH_FILTER",
-    payload: input,
-  };
-};
+// CART ACTIONS
