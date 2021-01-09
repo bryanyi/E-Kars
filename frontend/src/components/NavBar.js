@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../css/NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ click }) => {
   return (
     <div className="navbar">
       {/* Logo */}
@@ -14,7 +14,7 @@ const NavBar = () => {
         </h2>
       </div>
 
-      <form inline className="navbar__search">
+      <form className="navbar__search">
         <input className="navbar__input" type="search" placeholder="Search" />
         <button className="navbar__search__button">
           <Link to="/products">Search</Link>
@@ -47,7 +47,7 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <div className="hamburger__menu">
+      <div className="hamburger__menu" onClick={click}>
         <div></div>
         <div></div>
         <div></div>

@@ -3,14 +3,11 @@ import { useSelector } from "react-redux";
 import Sidebar from "../components/Sidebar";
 import { Container, Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
-import "../css/Products.css";
+import "../css/ProductsScreen.css";
 
 const Products = () => {
-  let cars = useSelector((state) => state.products);
-
-  if (!cars) {
-    return <h1 className="loading">LOADING CARS...</h1>;
-  }
+  const cars = useSelector((state) => state.getProducts);
+  const { products, loading, error } = cars;
 
   return (
     <div className="Products-Comp">
@@ -24,13 +21,19 @@ const Products = () => {
 
           <Col>
             <Row className="CarsDisplay">
-              {cars.map((car) => {
-                return (
-                  <Col md={12} lg={6} xl={4} key={car.id}>
-                    <Product key={car._id} car={car} />
-                  </Col>
-                );
-              })}
+              {loading ? (
+                <h1 className="loading">LOADING CARS...</h1>
+              ) : error ? (
+                <h2>Error has occurred. Details here: {error}</h2>
+              ) : (
+                products.map((car, index) => {
+                  return (
+                    <Col md={12} lg={6} xl={4} key={car.id}>
+                      <Product key={index} car={car} carId={car._id} />
+                    </Col>
+                  );
+                })
+              )}
             </Row>
           </Col>
         </Row>

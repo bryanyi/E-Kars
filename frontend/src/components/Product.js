@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Product = (props) => {
-  const { car } = props;
+const Product = ({ car, carId }) => {
   return (
     <div key={car.id} className="car-info">
       <div className="car-images">
-        <Link to={`/product/${111}`}>
+        <Link to={`/product/${carId}`}>
           <img src={car.image} alt={car.car} />
         </Link>
       </div>
@@ -26,7 +25,7 @@ const Product = (props) => {
           <Link to="/cart">Add To Cart</Link>
         </button>
         <button>
-          <Link to={`/product/${111}`}>View</Link>
+          <Link to={`/product/${carId}`}>View</Link>
         </button>
       </div>
     </div>
