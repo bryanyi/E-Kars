@@ -1,4 +1,4 @@
-const products = [
+const productsData = [
   {
     id: 1,
     car: "Black Tesla Model S",
@@ -8,6 +8,8 @@ const products = [
     miles: "12,500",
     year: "2020",
     rating: 4,
+    description:
+      "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
     countInStock: 15,
   },
   {
@@ -19,6 +21,8 @@ const products = [
     miles: "5,900",
     year: "2019",
     rating: 5,
+    description:
+      "Model X has the most storage room of any SUV in its class, comfortable seating for up to seven adults and the capability to tow up to 5,000 pounds. Falcon Wing doors are equipped with sensors to monitor the proximity of surroundings, and can open in even the tightest parking spaces.",
     countInStock: 10,
   },
   {
@@ -30,6 +34,8 @@ const products = [
     miles: "64,700",
     year: "2018",
     rating: 4,
+    description:
+      "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
     countInStock: 20,
   },
   {
@@ -41,6 +47,8 @@ const products = [
     miles: "89,900",
     year: "2020",
     rating: 3,
+    description:
+      "        The revamped exterior of the 2020 Edition warrants a double take. Blackout headlights, black badging and exclusive 17-in. black alloy wheels give it that statement-making edge.",
     countInStock: 4,
   },
 
@@ -53,6 +61,8 @@ const products = [
     miles: "45,000",
     year: "2020",
     rating: 2,
+    description:
+      "The Insight has plenty to swoon over, from its elegant design to its spacious cabin with brilliant finishes. And with available amenities like a power moonroof, heated front seats and remote engine start, the Insight is one seriously sophisticated hybrid",
     countInStock: 9,
   },
   {
@@ -63,6 +73,8 @@ const products = [
     miles: "57,400",
     year: "2019",
     rating: 4,
+    description:
+      "Leave nothing to chance. When it comes to comfort, style, and dynamics, the redesigned Audi Q5 is the new benchmark – pioneering technology, expressive styling, and a powerful driving experience in one. There are no obstacles, only achievements.",
     countInStock: 5,
   },
   {
@@ -74,6 +86,8 @@ const products = [
     miles: "233,221",
     year: "2020",
     rating: 3,
+    description:
+      "the first supercar powered by a bespoke Sport Hybrid Super Handling All-Wheel Drive™, 573-hp66 power unit that is an absolute game-changer. Engine power and direct electric torque combine for a new kind of dynamic performance, not just in acceleration, but in steering and braking too",
     countInStock: 12,
   },
 
@@ -86,6 +100,8 @@ const products = [
     miles: "12,500",
     year: "2018",
     rating: 4,
+    description:
+      "With dynamic looks, a spacious interior, and a body built to face the toughest challenges, the sporty and agile BMW X3 was designed for impulsive adventures",
     countInStock: 2,
   },
   {
@@ -97,7 +113,9 @@ const products = [
     miles: "58,600",
     year: "2019",
     rating: 5,
-    countInStock: 0,
+    description:
+      "The original 3 Series Sedan brought power, agility, and spirit to the everyday driver. In its seventh generation, that performance has only grown more pronounced",
+    countInStock: 6,
   },
   {
     id: 10,
@@ -108,6 +126,8 @@ const products = [
     miles: "12,674",
     year: "2021",
     rating: 4,
+    description:
+      "Take your adventures farther in Kona Electric. With an EPA-estimated range of 258 miles with zero emissions, it has the highest of any all-electric subcompact SUV. And it’s loaded with intuitive tech like wireless device charging and Heads-up Display. Compromise is now a thing of the past",
     countInStock: 15,
   },
   {
@@ -119,6 +139,8 @@ const products = [
     miles: "63,100",
     year: "2020",
     rating: 4,
+    description:
+      "Discover the instant acceleration, incredible range and nimble handling of the all-electric Nissan LEAF. Or, visit our benefits calculator page to see tax credits and incentives that may be available in your area and see how much you could potentially save by never buying fuel again",
     countInStock: 11,
   },
   {
@@ -130,8 +152,10 @@ const products = [
     miles: "59,900",
     year: "2019",
     rating: 2,
+    description:
+      "The transportation revolution continues. The powerful, stylish Camry Hybrid gives up nothing with its impressive fuel economy, advanced tech and stirring drive that will leave you breatheless",
     countInStock: 20,
   },
 ];
 
-module.exports = products;
+module.exports = productsData;

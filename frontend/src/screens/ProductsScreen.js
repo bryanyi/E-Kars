@@ -26,10 +26,10 @@ const Products = () => {
               ) : error ? (
                 <h2>Error has occurred. Details here: {error}</h2>
               ) : (
-                products.map((car, index) => {
+                products.map((car) => {
                   return (
                     <Col md={12} lg={6} xl={4} key={car.id}>
-                      <Product key={index} car={car} carId={car._id} />
+                      <Product key={car._id} car={car} carId={car._id} />
                     </Col>
                   );
                 })

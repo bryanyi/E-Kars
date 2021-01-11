@@ -46,11 +46,16 @@
   transition: 0.5s;
 }
 
-.navbar__search button a {
+.navbar__search button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.navbar__search a button {
   text-decoration: none;
   outline: none;
   color: #00adb5;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .navbar__links {

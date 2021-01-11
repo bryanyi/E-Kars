@@ -1,5 +1,5 @@
 const Cars = require("./models/carModel");
-const carData = require("./data/carProducts");
+const productsData = require("./data/carProducts");
 const connectDB = require("./config/db");
 
 connectDB();
@@ -7,7 +7,7 @@ connectDB();
 const importData = async () => {
   try {
     await Cars.deleteMany({});
-    await Cars.insertMany(carData);
+    await Cars.insertMany(productsData);
     console.log("Data Import Success");
     process.exit();
   } catch (error) {

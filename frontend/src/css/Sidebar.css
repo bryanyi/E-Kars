@@ -1,3 +1,7 @@
 .Sidebar h1 {
   font-size: 100%;
 }
+
+.filter__title {
+  margin-top: 1.5rem;
+}

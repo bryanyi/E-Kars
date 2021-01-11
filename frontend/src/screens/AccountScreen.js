@@ -1,11 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
+import "../css/AccountScreen.css";
 
-export default class Account extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Your Account Hello</h1>
-      </div>
-    );
-  }
-}
+const AccountScreen = () => {
+  const auth = useSelector((state) => state.auth);
+
+  return (
+    <div className="accountscreen">
+      {auth ? (
+        <div>
+          <h2>Hi There</h2>
+          <p>Here's your account information</p>
+        </div>
+      ) : (
+        <form action="">
+          <input type="text" />
+          <button>Login</button>
+        </form>
+      )}
+    </div>
+  );
+};
+
+export default AccountScreen;

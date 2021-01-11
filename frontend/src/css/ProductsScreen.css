@@ -48,29 +48,32 @@
   transition: 0.5s;
 }
 
-.Products-Comp .car-info .cart-button {
+.Products-Comp .car-info .view-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 2em;
 }
 
-.Products-Comp .car-info .cart-button button {
+.Products-Comp .car-info .view-buttons button {
   background-color: #00adb5;
   border: 0.5px solid #eee;
   padding: 0.5em;
   border-radius: 0.5em;
+  width: 100%;
   color: white;
   margin-top: 0.5em;
   transition: 0.4s;
 }
-.Products-Comp .car-info .cart-button button a {
+.Products-Comp .car-info .view-buttons a {
   text-decoration: none;
   outline: none;
   color: white;
+  width: 90%;
 }
 
-.Products-Comp .car-info .cart-button button:hover {
+.Products-Comp .car-info .view-buttons button:hover {
   color: white;
   background-color: #171717;
 }

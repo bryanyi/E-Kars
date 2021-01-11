@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const Product = ({ car, carId }) => {
+import { useDispatch } from "react-redux";
+
+// ACTIONS
+import { addToCart } from "../redux/actions/cartActions";
+
+const Product = ({ car, carId, match, history }) => {
+  const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(car._id, qty));
+  };
+
   return (
     <div key={car.id} className="car-info">
       <div className="car-images">
@@ -20,13 +32,14 @@ const Product = ({ car, carId }) => {
         </div>
       </div>
 
-      <div className="cart-button">
-        <button>
-          <Link to="/cart">Add To Cart</Link>
-        </button>
-        <button>
-          <Link to={`/product/${carId}`}>View</Link>
-        </button>
+      <div className="view-buttons">
+        <Link to="/cart">
+          <button onClick={addToCartHandler}>Add To Cart</button>
+        </Link>
+
+        <Link to={`/product/${carId}`}>
+          <button>View</button>
+        </Link>
       </div>
     </div>
   );

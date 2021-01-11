@@ -1,17 +1,22 @@
 .productscreen {
   max-width: 1300px;
-  margin: 1rem auto;
+  margin: 2.5rem auto;
   display: flex;
 }
 
 .productscreen__left {
   display: flex;
-  flex: 0.8;
+  flex: 0.7;
 }
 
 .left__image {
   margin: 1rem;
   flex: 0.6;
+}
+
+.left__image img {
+  height: auto;
+  width: 100%;
 }
 
 .left__info {
@@ -20,6 +25,25 @@
   background-color: #fff;
   height: fit-content;
   font-size: 0.9rem;
+}
+
+.left__info button {
+  background-color: #00adb5;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  outline: none;
+  border: none;
+  transition: 0.2s ease-in;
+}
+
+.left__info button:hover {
+  opacity: 0.8;
+}
+
+.left__info button a {
+  text-decoration: none;
+  color: white;
+  outline: none;
 }
 
 .left__name {
@@ -38,12 +62,18 @@
   border: none;
 }
 
+.right__info > p:last-child {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+}
+
 .productscreen__right {
-  flex: 0.2;
+  flex: 0.3;
 }
 
 .right__info {
-  width: 250px;
+  width: 350px;
   margin: 1rem;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
@@ -51,7 +81,7 @@
 
 .right__info p {
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -59,14 +89,38 @@
 .right__info p > button {
   grid-column: 1/-1;
   padding: 10px 16px;
-  background-color: #171717;
+  background-color: #00adb5;
   color: #f4f4f4;
-  border: 1px solid #171717;
+  border: 1px solid #00adb5;
   cursor: pointer;
+}
+
+.right__info p > button:hover {
+  opacity: 0.8;
 }
 
 .right__info select {
   padding: 16px;
+}
+
+.productscreen__right .add__to__cart {
+  text-decoration: none;
+  outline: none;
+}
+
+.productscreen__right .add__to__cart button {
+  background-color: #00adb5;
+  border: 0.5px solid #eee;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  width: 100%;
+  color: white;
+  margin-top: 0.5em;
+  transition: 0.4s;
+}
+
+.productscreen__right .add__to__cart button:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 960px) {
@@ -94,14 +148,4 @@
     width: 100%;
     margin: 0;
   }
-}
-
-.inStock {
-  color: green;
-  font-weight: 300;
-}
-
-.outOfStock {
-  color: red;
-  font-weight: 300;
 }

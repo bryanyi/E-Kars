@@ -4,7 +4,7 @@ import FeaturedImage from "../images/white_tesla.png";
 import Featured from "../components/Featured";
 import Services from "../components/Services";
 
-import "../css/Landing.css";
+import "../css/HomeScreen.css";
 
 const Landing = () => {
   return (
