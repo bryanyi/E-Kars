@@ -26,7 +26,7 @@ app.use(passport.session());
 app.use(express.json());
 app.use("/api/products", productRoutes);
 
-// require("./routes/authRoutes")(app);
+require("./routes/authRoutes")(app);
 
 const PORT = process.env.PORT || 5000;
 
