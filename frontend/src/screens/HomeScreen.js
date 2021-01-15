@@ -5,6 +5,7 @@ import Featured from "../components/Featured";
 import Services from "../components/Services";
 
 import "../css/HomeScreen.css";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -17,6 +18,9 @@ const Landing = () => {
               <h1>made easy</h1>
               <h6>Easily browse and choose an e-car</h6>
               <h6>just like on Amazon</h6>
+              <button className="shop__now">
+                <Link to="/products">Shop Now</Link>
+              </button>
             </div>
           </Col>
           <Col className="featured d-flex justify-content-center align-items-center">

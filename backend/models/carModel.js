@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const carSchema = new mongoose.Schema({
+  id_: Number,
   car: {
     type: String,
     required: true,
@@ -32,6 +33,9 @@ const carSchema = new mongoose.Schema({
   countInStock: {
     type: Number,
     required: true,
+  },
+  tags: {
+    type: Array,
   },
 });
 

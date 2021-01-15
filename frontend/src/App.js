@@ -16,8 +16,12 @@ import ProductsScreen from "./screens/ProductsScreen";
 import HomeScreen from "./screens/HomeScreen";
 import CartScreen from "./screens/CartScreen";
 import OrdersScreen from "./screens/OrdersScreen";
-import AccountScreen from "./screens/AccountScreen";
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
+import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
+import ResetPasswordScreen from "./screens/ResetPasswordScreen";
+import CheckoutScreen from "./screens/CheckoutScreen";
 
 const App = () => {
   const [sideToggle, setSideToggle] = useState(false);
@@ -39,9 +43,21 @@ const App = () => {
           <Route path="/" exact component={HomeScreen} />
           <Route path="/cart" exact component={CartScreen} />
           <Route path="/orders" exact component={OrdersScreen} />
-          <Route path="/account" exact component={AccountScreen} />
           <Route path="/products" exact component={ProductsScreen} />
           <Route path="/product/:id" exact component={ProductDetailsScreen} />
+          <Route path="/login" exact component={LoginScreen} />
+          <Route path="/register" exact component={RegisterScreen} />
+          <Route
+            path="/forgotpassword"
+            exact
+            component={ForgotPasswordScreen}
+          />
+          <Route
+            path="/passwordreset/:resetToken"
+            exact
+            component={ResetPasswordScreen}
+          />
+          <Route exact path="/checkout" component={CheckoutScreen} />
         </Switch>
       </Router>
     </div>

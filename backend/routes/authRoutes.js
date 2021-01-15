@@ -1,10 +1,15 @@
-const passport = require("passport");
+const express = require("express");
+const router = express.Router();
+const {
+  register,
+  login,
+  forgotpassword,
+  resetpassword,
+} = require("../controllers/authController");
 
-module.exports = (app) => {
-  app.get(
-    "/auth/google",
-    passport.authenticate("google", { scope: ["profile", "email"] })
-  );
+router.route("/register").post(register);
+router.route("/login").post(login);
+router.route("/forgotpassword").post(forgotpassword);
+router.route("/passwordreset/:resetToken").put(resetpassword);
 
-  app.get("/auth/google/callback", passport.authenticate("google"));
-};
+module.exports = router;

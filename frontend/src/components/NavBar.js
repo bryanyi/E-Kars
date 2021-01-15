@@ -1,10 +1,19 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "../css/NavBar.css";
+import { useState } from "react";
+
+// ACTION
+import { searchFilter } from "../redux/actions/searchAction";
+import { useEffect } from "react";
 
 const NavBar = ({ click }) => {
-  const auth = useSelector((state) => state.auth);
+  const [searchTerm, setSearchTerm] = useState("");
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    localStorage.removeItem("authToken");
+  };
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -13,9 +22,13 @@ const NavBar = ({ click }) => {
     return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
   };
 
+  const searchHandler = () => {
+    dispatch(searchFilter(searchTerm));
+    console.log("Search filter was dispatched from navbar!!");
+  };
+
   return (
     <div className="navbar">
-      {/* Logo */}
       <div className="navbar_logo">
         <h2>
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
@@ -25,20 +38,32 @@ const NavBar = ({ click }) => {
       </div>
 
       <form className="navbar__search">
-        <input className="navbar__input" type="search" placeholder="Search" />
+        <input
+          className="navbar__input"
+          type="search"
+          placeholder="Search"
+          onChange={setSearchTerm}
+        />
 
         <Link to="/products">
-          <button className="navbar__search__button">Search</button>
+          <button
+            type="submit "
+            className="navbar__search__button"
+            onClick={searchHandler}
+          >
+            Search
+          </button>
         </Link>
       </form>
 
-      {/* Links */}
       <ul className="navbar__links">
         <li>
-          {auth ? (
-            <Link to="/account">Your Account</Link>
+          {localStorage.getItem("authToken") ? (
+            <Link to="/" onClick={logoutHandler}>
+              Logout
+            </Link>
           ) : (
-            <Link to="/account">Login</Link>
+            <Link to="/login">Login</Link>
           )}
         </li>
 

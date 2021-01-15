@@ -9,6 +9,8 @@ const Products = () => {
   const cars = useSelector((state) => state.getProducts);
   const { products, loading, error } = cars;
 
+  const searchedTerm = useSelector((state) => state.searched);
+
   return (
     <div className="Products-Comp">
       <Container fluid>
@@ -26,13 +28,23 @@ const Products = () => {
               ) : error ? (
                 <h2>Error has occurred. Details here: {error}</h2>
               ) : (
-                products.map((car) => {
-                  return (
-                    <Col md={12} lg={6} xl={4} key={car.id}>
-                      <Product key={car._id} car={car} carId={car._id} />
-                    </Col>
-                  );
-                })
+                products
+                  .filter((product) => {
+                    if (searchedTerm == null || searchedTerm == "") {
+                      return product;
+                    } else if (
+                      product.tags.includes(searchedTerm.toLowerCase())
+                    ) {
+                      return product;
+                    }
+                  })
+                  .map((car) => {
+                    return (
+                      <Col key={car._id} md={12} lg={6} xl={4} key={car.id}>
+                        <Product key={car.id_} car={car} carId={car._id} />
+                      </Col>
+                    );
+                  })
               )}
             </Row>
           </Col>

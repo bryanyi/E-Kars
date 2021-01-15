@@ -7,14 +7,35 @@
   height: 100vh;
 }
 .Landing-page .desc {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: auto auto;
 }
-
+.Landing-page .description {
+  padding: 3rem;
+  text-align: start;
+}
 .Landing-page .description h1 {
   font-size: 5rem;
 }
 
+.Landing-page .description button {
+  background-color: #00adb5;
+  border-radius: 0.5em;
+  padding: 1em;
+  outline: none;
+  border: none;
+  transition: 0.2s ease-in;
+}
+
+.Landing-page .description button:hover {
+  background-color: #171717;
+}
+
+.Landing-page .description button a {
+  text-decoration: none;
+  color: white;
+}
 .Landing-page .featured img {
   width: 50rem;
 }

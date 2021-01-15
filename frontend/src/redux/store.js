@@ -9,12 +9,14 @@ import {
   getProductsReducer,
   getProductDetailsReducer,
 } from "./reducers/productsReducer";
+import { searchReducer } from "./reducers/searchReducer";
 
 const allReducers = combineReducers({
   auth: authReducer,
   getProducts: getProductsReducer,
   getProductDetails: getProductDetailsReducer,
   cart: cartReducer,
+  searched: searchReducer,
 });
 
 const middleware = [thunk];

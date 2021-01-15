@@ -1,10 +1,11 @@
+import * as actionTypes from "../constants/authConstant";
 import axios from "axios";
 
 export const fetchUser = () => async (dispatch) => {
-  const res = await axios.get("/api/current_user");
-  console.log("this is authentication" + res);
+  const res = await axios.get("/api/auth");
+  console.log("this is authentication PAYLOAD" + res);
   dispatch({
-    type: "FETCH_USER",
+    type: actionTypes.FETCH_USER,
     payload: res,
   });
 };

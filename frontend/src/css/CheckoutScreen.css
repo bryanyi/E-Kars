@@ -1,0 +1,28 @@
+.checkoutscreen {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutscreen .checkoutscreen__alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.checkoutscreen .checkoutscreen__alert button {
+  outline: none;
+  border: none;
+  width: 10rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: white;
+  background-color: #00adb5;
+  margin-top: 2.5rem;
+  transition: 0.2s;
+}
+
+.checkoutscreen .checkoutscreen__alert button:hover {
+  opacity: 0.8;
+}

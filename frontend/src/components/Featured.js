@@ -29,7 +29,7 @@ function Featured() {
                 <h5>Excellent Condition</h5>
               </div>
               <Button className="btn" variant="danger">
-                <a href="#">View more details</a>
+                <a href="/products">View more details</a>
               </Button>
             </div>
           </Col>
