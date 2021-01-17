@@ -44,9 +44,9 @@ const ProductDetailsScreen = ({ match, history }) => {
               <p className="left__name">{product.car}</p>
               <p>Price: ${product.price}</p>
               <p>{product.description}</p>
-              <button className="back__button">
-                <Link to="/products">Go back</Link>
-              </button>
+              <Link to="/products">
+                <button className="back__button">Go back</button>
+              </Link>
             </div>
           </div>
           <div className="productscreen__right">

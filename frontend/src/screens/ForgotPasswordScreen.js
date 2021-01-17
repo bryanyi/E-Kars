@@ -41,19 +41,20 @@ const ForgotPasswordScreen = () => {
       >
         <h3 className="forgotpassword-screen__title">Forgot Password</h3>
         {error && <span className="error-message">{error}</span>}
-        {success && <span className="success-message">{success}</span>}
+        {success && <span className="success-message">{success}!</span>}
         <div className="form-group">
           <p className="forgotpassword-screen__subtext">
-            Please enter the email address you register your account with. We
-            will send you reset password confirmation to this email
+            Please enter the email address you registered your account with. A
+            link will be sent to reset your password.
           </p>
-          <label htmlFor="email">Email:</label>
+          {/* <label htmlFor="email">Email:</label> */}
           <input
             type="email"
             required
             id="email"
             placeholder="Email address"
             value={email}
+            autoComplete="off"
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>

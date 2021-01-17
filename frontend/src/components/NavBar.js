@@ -5,15 +5,10 @@ import { useState } from "react";
 
 // ACTION
 import { searchFilter } from "../redux/actions/searchAction";
-import { useEffect } from "react";
 
 const NavBar = ({ click }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
-
-  const logoutHandler = () => {
-    localStorage.removeItem("authToken");
-  };
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -59,9 +54,7 @@ const NavBar = ({ click }) => {
       <ul className="navbar__links">
         <li>
           {localStorage.getItem("authToken") ? (
-            <Link to="/" onClick={logoutHandler}>
-              Logout
-            </Link>
+            <Link to="/account">Your Account</Link>
           ) : (
             <Link to="/login">Login</Link>
           )}

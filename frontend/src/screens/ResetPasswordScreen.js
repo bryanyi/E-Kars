@@ -53,7 +53,7 @@ const ResetPasswordScreen = ({ match }) => {
         className="resetpassword-screen__form"
       >
         <h3 className="resetpassword-screen__title">Forgot Password</h3>
-        {error && <span className="error-message">{error} </span>}
+        {error && <span className="error-message">{error} !</span>}
         {success && (
           <span className="success-message">
             {success} <Link to="/login">Login</Link>

@@ -49,23 +49,37 @@ const LoginScreen = ({ history }) => {
     <div className="login-screen">
       <form onSubmit={loginHandler} className="login-screen__form">
         <h3 className="login-screen__title">Login</h3>
-        {error && <span className="error-message">{error}</span>}
+        {error && (
+          <span className="error-message">{error}! Please try again</span>
+        )}
 
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          {/* <label htmlFor="email">Email:</label> */}
           <input
             type="email"
             required
             id="email"
             placeholder="Enter Email"
             value={email}
+            autoComplete="off"
             onChange={(e) => setEmail(e.target.value)}
             tabIndex={1}
           />
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password:</label>
+          {/* <label htmlFor="password">Password:</label> */}
+
+          <input
+            type="password"
+            required
+            id="password"
+            placeholder="Enter Password"
+            value={password}
+            autoComplete="off"
+            onChange={(e) => setPassword(e.target.value)}
+            tabIndex={2}
+          />
           <Link
             to="/forgotpassword"
             className="login-screen__forgotpassword"
@@ -73,18 +87,9 @@ const LoginScreen = ({ history }) => {
           >
             Forgot Password?
           </Link>
-          <input
-            type="password"
-            required
-            id="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            tabIndex={2}
-          />
         </div>
 
-        <button type="submit" className="btn btn-primary" tabIndex={3}>
+        <button type="submit" tabIndex={3}>
           Login
         </button>
         <span className="login-screen__subtext">

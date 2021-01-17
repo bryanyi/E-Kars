@@ -18,9 +18,9 @@ const Landing = () => {
               <h1>made easy</h1>
               <h6>Easily browse and choose an e-car</h6>
               <h6>just like on Amazon</h6>
-              <button className="shop__now">
-                <Link to="/products">Shop Now</Link>
-              </button>
+              <Link to="/products">
+                <button className="shop__now">Shop Now</button>
+              </Link>
             </div>
           </Col>
           <Col className="featured d-flex justify-content-center align-items-center">

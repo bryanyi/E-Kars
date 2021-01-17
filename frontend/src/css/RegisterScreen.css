@@ -7,10 +7,35 @@
 }
 
 .register-screen__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 380px;
   padding: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background: #fff;
+}
+
+.register-screen__form button {
+  align-items: center;
+  background-color: #00adb5;
+  color: white;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+}
+
+.register-screen__form button:hover {
+  background-color: #171717;
+}
+
+.register-screen__form .form-group input {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  border-bottom: 1px solid #171717;
+  margin-left: 1rem;
+  font-size: small;
 }
 
 .register-screen__title {

@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Brands.css";
 
-function Brands() {
+const Brands = () => {
   return (
     <div className="Brands">
       <ul>
@@ -16,6 +16,6 @@ function Brands() {
       </ul>
     </div>
   );
-}
+};
 
 export default Brands;

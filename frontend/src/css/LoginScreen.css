@@ -7,10 +7,51 @@
 }
 
 .login-screen__form {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
   width: 380px;
   padding: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background: #fff;
+}
+
+.login-screen__form h3 {
+  margin-bottom: 1.5rem;
+}
+
+.login-screen__form .error-message {
+  color: red;
+  font-weight: 400;
+}
+
+.login-screen__form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-screen__form .form-group input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.login-screen__form button {
+  border: none;
+  outline: none;
+  background-color: #00adb5;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.login-screen__form button:hover {
+  background-color: #171717;
 }
 
 .login-screen__title {
@@ -20,6 +61,7 @@
 
 .login-screen__forgotpassword {
   font-size: 0.7rem;
+  margin-top: 0.5rem;
 }
 
 .login-screen__subtext {

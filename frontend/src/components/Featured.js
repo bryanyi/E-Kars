@@ -28,9 +28,12 @@ function Featured() {
                 <h5>26,000 miles</h5>
                 <h5>Excellent Condition</h5>
               </div>
-              <Button className="btn" variant="danger">
-                <a href="/products">View more details</a>
-              </Button>
+
+              <a href="/products">
+                <Button className="btn" variant="danger">
+                  View More Details
+                </Button>
+              </a>
             </div>
           </Col>
         </Row>

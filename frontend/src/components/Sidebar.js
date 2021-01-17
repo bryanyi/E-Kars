@@ -22,7 +22,7 @@ const Sidebar = () => {
 
         <div>
           <input type="checkbox" name="Audi" />
-          <label htmlFor="Adui">Adui</label>
+          <label htmlFor="Adui">Audi</label>
         </div>
 
         <div>

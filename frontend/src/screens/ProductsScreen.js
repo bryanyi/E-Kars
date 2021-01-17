@@ -30,7 +30,7 @@ const Products = () => {
               ) : (
                 products
                   .filter((product) => {
-                    if (searchedTerm == null || searchedTerm == "") {
+                    if (searchedTerm === null || searchedTerm === "") {
                       return product;
                     } else if (
                       product.tags.includes(searchedTerm.toLowerCase())

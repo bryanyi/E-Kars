@@ -53,6 +53,11 @@
   opacity: 0.8;
 }
 
+.cartscreen__right div button a {
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 1320px) {
   .cartscreen {
     max-width: 900px;

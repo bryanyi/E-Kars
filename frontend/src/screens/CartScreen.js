@@ -59,8 +59,16 @@ const CartScreen = () => {
           <p>Subtotal ({getCartCount()}) items</p>
           <p>${getCartSubtotal().toFixed(2)}</p>
         </div>
-        <div>
-          <button>Proceed to Checkout</button>
+        <div className="cartscreen__checkout">
+          {localStorage.getItem("authToken") ? (
+            <Link to="/checkout">
+              <button>Proceed to Checkout</button>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <button>Login to Checkout</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
