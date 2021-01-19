@@ -12,9 +12,7 @@ import NavBar from "./components/NavBar";
 import SideDrawer from "./components/SideDrawer";
 
 // SCREENS
-import AccountScreen from "./screens/AccountScreen";
 import CartScreen from "./screens/CartScreen";
-import CheckoutScreen from "./screens/CheckoutScreen";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
@@ -42,7 +40,6 @@ const App = () => {
         <Brands />
         <Switch>
           <Route path="/" exact component={HomeScreen} />
-          <Route path="/account" exact component={AccountScreen} />
           <Route path="/cart" exact component={CartScreen} />
           <Route path="/orders" exact component={OrdersScreen} />
           <Route path="/products" exact component={ProductsScreen} />
@@ -59,7 +56,6 @@ const App = () => {
             exact
             component={ResetPasswordScreen}
           />
-          <Route exact path="/checkout" component={CheckoutScreen} />
         </Switch>
       </Router>
     </div>

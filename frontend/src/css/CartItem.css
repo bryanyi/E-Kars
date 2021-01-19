@@ -10,13 +10,22 @@
   place-items: center;
 }
 
+.cartitem .cartitem__image {
+  display: flex;
+  justify-content: center;
+}
+
+.cartitem .cartitem__image img {
+  width: 300px;
+}
+
 .cartitem__name {
   text-decoration: none;
   color: #171717;
 }
 
 .cartitem__name:hover {
-  color: #dd219e;
+  color: #00adb5;
 }
 
 .cartitem__select {
@@ -36,7 +45,13 @@
 .cartitem__deleteBtn:focus,
 .cartitem__deleteBtn:active {
   background: #171717;
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+  .cartitem .cartitem__image img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -49,9 +64,6 @@
     padding: 8px 13px;
   }
 
-  .cartitem__deleteBtn {
-    border-radius: 0.5rem;
-  }
   .cartitem__price {
     font-size: 0.8rem;
   }

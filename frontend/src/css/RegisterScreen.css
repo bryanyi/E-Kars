@@ -10,10 +10,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   width: 380px;
   padding: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background: #fff;
+}
+
+.register-screen__form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .register-screen__form button {
@@ -23,6 +34,7 @@
   outline: none;
   border: none;
   transition: 0.5s;
+  margin-top: 1rem;
 }
 
 .register-screen__form button:hover {
@@ -46,5 +58,5 @@
 .register-screen__subtext {
   font-size: 0.7rem;
   display: block;
-  margin: 0.5rem 0;
+  margin: 1rem auto;
 }

@@ -37,6 +37,9 @@ const CartScreen = () => {
     <div className="cartscreen">
       <div className="cartscreen__left">
         <h2>Shopping Cart</h2>
+        <Link to="/products">
+          <button>Back to Shop</button>
+        </Link>
         {cartItems.length === 0 ? (
           <div>
             Your cart is empty <Link to="/products">Go Back</Link>
@@ -62,7 +65,7 @@ const CartScreen = () => {
         <div className="cartscreen__checkout">
           {localStorage.getItem("authToken") ? (
             <Link to="/checkout">
-              <button>Proceed to Checkout</button>
+              <button>Checkout</button>
             </Link>
           ) : (
             <Link to="/login">

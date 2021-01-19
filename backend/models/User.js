@@ -25,6 +25,16 @@ const UserSchema = new mongoose.Schema({
   },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
+  wishlist: {
+    image: String,
+    car: String,
+    price: Number,
+  },
+  orderhistory: {
+    image: String,
+    car: String,
+    price: Number,
+  },
 });
 
 // Middleware for hashing pw

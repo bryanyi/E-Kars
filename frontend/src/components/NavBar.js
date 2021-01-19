@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "../css/NavBar.css";
 import { useState } from "react";
@@ -9,6 +9,8 @@ import { searchFilter } from "../redux/actions/searchAction";
 const NavBar = ({ click }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
+
+  const history = useHistory();
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
@@ -22,13 +24,22 @@ const NavBar = ({ click }) => {
     console.log("Search filter was dispatched from navbar!!");
   };
 
+  const logoHandler = () => {
+    history.push("/");
+    history.go(0);
+  };
+
+  const logoutHandler = () => {
+    localStorage.removeItem("authToken");
+    history.push("/login");
+    history.go(0);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar_logo">
         <h2>
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            E-Kars
-          </Link>
+          <Link onClick={logoHandler}>E-Kars</Link>
         </h2>
       </div>
 
@@ -54,7 +65,7 @@ const NavBar = ({ click }) => {
       <ul className="navbar__links">
         <li>
           {localStorage.getItem("authToken") ? (
-            <Link to="/account">Your Account</Link>
+            <Link onClick={logoutHandler}>Logout</Link>
           ) : (
             <Link to="/login">Login</Link>
           )}

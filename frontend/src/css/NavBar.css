@@ -12,6 +12,10 @@
 .navbar_logo {
   margin-right: 2rem;
 }
+.navbar_logo a {
+  text-decoration: none;
+  color: white;
+}
 
 .navbar_logo h2 {
   color: #f4f4f4;
@@ -88,8 +92,7 @@
   border-radius: 8px;
 }
 .cart__link:hover {
-  background: #dd219e;
-  color: #f4f4f4;
+  opacity: 0.8;
 }
 
 .cartlogo__badge {

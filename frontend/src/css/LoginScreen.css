@@ -9,8 +9,8 @@
 .login-screen__form {
   display: flex;
   justify-content: center;
-
   flex-direction: column;
+  align-content: center;
   width: 380px;
   padding: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 100%;
 }
 
 .login-screen__form .form-group input {
@@ -67,5 +68,5 @@
 .login-screen__subtext {
   font-size: 0.7rem;
   display: block;
-  margin: 0.5rem 0;
+  margin: 1rem auto;
 }
