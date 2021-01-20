@@ -13,10 +13,13 @@
   "author": "Bryan Yi",
   "license": "ISC",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.2.0",
+    "@stripe/stripe-js": "^1.11.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
     "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -29,6 +32,8 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
     "redux-devtools-extension": "^2.13.8",
-    "sendgrid-mail": "0.0.3"
+    "sendgrid-mail": "0.0.3",
+    "stripe": "^8.131.1",
+    "uuid": "^8.3.2"
   }
 }

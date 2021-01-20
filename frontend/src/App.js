@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchUser } from "./redux/actions/authActions";
 import { fetchProducts } from "./redux/actions/productActions";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./css/App.css";
@@ -13,6 +12,7 @@ import SideDrawer from "./components/SideDrawer";
 
 // SCREENS
 import CartScreen from "./screens/CartScreen";
+import CheckoutScreen from "./screens/CheckoutScreen";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
@@ -27,7 +27,6 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchUser());
     dispatch(fetchProducts());
   }, [dispatch]);
 
@@ -56,6 +55,7 @@ const App = () => {
             exact
             component={ResetPasswordScreen}
           />
+          <Route path="/checkout" exact component={CheckoutScreen} />
         </Switch>
       </Router>
     </div>

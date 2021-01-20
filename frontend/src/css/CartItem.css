@@ -3,7 +3,7 @@
   padding: 1rem;
   margin-bottom: 8px;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
   gap: 8px;
   background-color: #fff;
   border-radius: 2px;
@@ -33,9 +33,9 @@
 }
 
 .cartitem__deleteBtn {
-  padding: 10px 17px;
+  padding: 10px 20px;
   color: red;
-  background: #f4f4f4;
+  background: white;
   border: 1px solid #171717;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -44,8 +44,8 @@
 .cartitem__deleteBtn:hover,
 .cartitem__deleteBtn:focus,
 .cartitem__deleteBtn:active {
-  background: #171717;
   transform: scale(1.1);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 800px) {
