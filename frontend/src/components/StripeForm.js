@@ -11,7 +11,7 @@ const StripeForm = ({ getCartCount, getCartSubtotal }) => {
   const stripe = useStripe();
   const elements = useElements();
 
-  useEffect(async () => {
+  useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     window
       .fetch("/api/stripe/payment", {
@@ -155,11 +155,11 @@ const StripeForm = ({ getCartCount, getCartSubtotal }) => {
           </div>
           <div className="shipping">
             <h6>Shipping</h6>
-            <h6>${shippingTotal()}</h6>
+            <h6>${shippingTotal().toFixed(2)}</h6>
           </div>
           <div className="total">
             <h6>Total (tax included)</h6>
-            <h6>${orderTotal()}</h6>
+            <h6>${orderTotal().toFixed(2)}</h6>
           </div>
         </div>
 

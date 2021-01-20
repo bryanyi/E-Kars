@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/actions/cartActions";
 
 const Product = ({ car, carId, match, history }) => {
-  const [qty, setQty] = useState(1);
+  const [qty] = useState(1);
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {

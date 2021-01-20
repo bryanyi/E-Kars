@@ -24,11 +24,6 @@ const NavBar = ({ click }) => {
     console.log("Search filter was dispatched from navbar!!");
   };
 
-  const logoHandler = () => {
-    history.push("/");
-    history.go(0);
-  };
-
   const logoutHandler = () => {
     localStorage.removeItem("authToken");
     history.push("/login");
@@ -39,7 +34,7 @@ const NavBar = ({ click }) => {
     <div className="navbar">
       <div className="navbar_logo">
         <h2>
-          <Link onClick={logoHandler}>E-Kars</Link>
+          <a href="/">E-Kars</a>
         </h2>
       </div>
 
@@ -65,7 +60,9 @@ const NavBar = ({ click }) => {
       <ul className="navbar__links">
         <li>
           {localStorage.getItem("authToken") ? (
-            <Link onClick={logoutHandler}>Logout</Link>
+            <a href="/login" onClick={logoutHandler}>
+              Logout
+            </a>
           ) : (
             <Link to="/login">Login</Link>
           )}

@@ -16,7 +16,7 @@ import CheckoutScreen from "./screens/CheckoutScreen";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
-import OrdersScreen from "./screens/OrdersScreen";
+
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 import ProductsScreen from "./screens/ProductsScreen";
 import RegisterScreen from "./screens/RegisterScreen";
@@ -40,7 +40,6 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={HomeScreen} />
           <Route path="/cart" exact component={CartScreen} />
-          <Route path="/orders" exact component={OrdersScreen} />
           <Route path="/products" exact component={ProductsScreen} />
           <Route path="/product/:id" exact component={ProductDetailsScreen} />
           <Route path="/login" exact component={LoginScreen} />

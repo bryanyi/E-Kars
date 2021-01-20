@@ -38,9 +38,9 @@ const Products = () => {
                       return product;
                     }
                   })
-                  .map((car) => {
+                  .map((car, index) => {
                     return (
-                      <Col key={car._id} md={12} lg={6} xl={4} key={car.id}>
+                      <Col md={12} lg={6} xl={4} key={index}>
                         <Product key={car.id_} car={car} carId={car._id} />
                       </Col>
                     );
