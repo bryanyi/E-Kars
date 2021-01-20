@@ -189,7 +189,12 @@ const StripeForm = ({ getCartCount, getCartSubtotal }) => {
         )}
         {/* Show a success message upon completion */}
         <p className={succeeded ? "result-message" : "result-message hidden"}>
-          Order placed! Check your email for details.
+          Order placed!
+          <div className="back__to__shop">
+            <i className="fas fa-long-arrow-alt-left"></i>
+            {"  "}
+            <a href="/products">Back to Shop</a>
+          </div>
         </p>
       </form>
     </div>

@@ -77,11 +77,7 @@ const Sidebar = () => {
 
       <div className="car__rating filter__title">
         <h5>Avg. Customer Review</h5>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
-        <i className="fas fa-star"></i>
+        <p>⭐️ ⭐️ ⭐️ ⭐️⭐️</p>
       </div>
     </div>
   );

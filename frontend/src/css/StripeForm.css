@@ -29,8 +29,25 @@
 
 .result-message {
   line-height: 22px;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
+}
+
+.result-message .back__to__shop {
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.result-message a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.back__to__shop:hover {
+  transform: scale(1.1);
 }
 
 .hidden {

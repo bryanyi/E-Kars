@@ -63,7 +63,7 @@
   border-radius: 0.5em;
   width: 100%;
   color: white;
-  margin-top: 0.5em;
+  margin-top: 0.2rem;
   transition: 0.4s;
 }
 .Products-Comp .car-info .view-buttons a {
@@ -86,6 +86,10 @@
   display: flex;
   justify-content: space-around;
   color: #00adb5;
+}
+
+.car-sale-info .car__rating h6 {
+  display: flex;
 }
 
 .loading {

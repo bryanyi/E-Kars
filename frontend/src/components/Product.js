@@ -28,7 +28,15 @@ const Product = ({ car, carId, match, history }) => {
         <div className="car-sale-info">
           <h6>{car.year}</h6>
           <h6>${car.price}</h6>
-          <h6>Rating: {car.rating}</h6>
+          <div className="car__rating">
+            <h6>
+              {Array(car.rating)
+                .fill()
+                .map((_, i) => {
+                  return <div key={i}>⭐️</div>;
+                })}
+            </h6>
+          </div>
         </div>
       </div>
 

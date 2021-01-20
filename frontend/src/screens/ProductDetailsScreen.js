@@ -21,9 +21,6 @@ const ProductDetailsScreen = ({ match, history }) => {
   useEffect(() => {
     if (product && match.params.id !== product._id) {
       dispatch(getProductDetails(match.params.id));
-      console.log("dispatch was fired!");
-    } else {
-      console.log("BOOO dispatch wasn't fired =(");
     }
   }, [dispatch, match.params.id, product]);
 
@@ -43,6 +40,14 @@ const ProductDetailsScreen = ({ match, history }) => {
             <div className="left__info">
               <p className="left__name">{product.car}</p>
               <p>Price: ${product.price}</p>
+              <div className="car__rating">
+                Rating:{"    "}
+                {Array(product.rating)
+                  .fill()
+                  .map((_, i) => {
+                    return <p key={i}> ⭐️</p>;
+                  })}
+              </div>
               <p>{product.description}</p>
               <Link to="/products">
                 <button className="back__button">Go back</button>
