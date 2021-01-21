@@ -16,7 +16,6 @@ import CheckoutScreen from "./screens/CheckoutScreen";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
-
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 import ProductsScreen from "./screens/ProductsScreen";
 import RegisterScreen from "./screens/RegisterScreen";

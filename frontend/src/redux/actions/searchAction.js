@@ -6,3 +6,10 @@ export const searchFilter = (searchTerm) => {
     payload: searchTerm,
   };
 };
+
+export const searchBrand = (searchBrand) => {
+  return {
+    type: actionTypes.SEARCH_BRAND,
+    payload: searchBrand,
+  };
+};

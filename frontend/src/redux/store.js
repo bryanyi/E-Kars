@@ -3,18 +3,20 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 // REDUCERS
+import { searchReducer } from "./reducers/searchReducer";
+import { carElements } from "./reducers/brandsReducer";
 import { cartReducer } from "./reducers/cartReducer";
 import {
   getProductsReducer,
   getProductDetailsReducer,
 } from "./reducers/productsReducer";
-import { searchReducer } from "./reducers/searchReducer";
 
 const allReducers = combineReducers({
   getProducts: getProductsReducer,
   getProductDetails: getProductDetailsReducer,
   cart: cartReducer,
   searched: searchReducer,
+  carElements: carElements,
 });
 
 const middleware = [thunk];

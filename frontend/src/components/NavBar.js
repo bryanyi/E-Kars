@@ -21,7 +21,6 @@ const NavBar = ({ click }) => {
 
   const searchHandler = () => {
     dispatch(searchFilter(searchTerm));
-    console.log("Search filter was dispatched from navbar!!");
   };
 
   const logoutHandler = () => {
@@ -42,7 +41,7 @@ const NavBar = ({ click }) => {
         <input
           className="navbar__input"
           type="search"
-          placeholder="Search"
+          placeholder="Search Tesla, BMW, Audi, 2021..."
           onChange={setSearchTerm}
         />
 
@@ -69,12 +68,16 @@ const NavBar = ({ click }) => {
         </li>
 
         <li>
-          <Link
-            to="/products"
-            style={{ textDecoration: "none", color: "white" }}
+          <a
+            href="/products"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              cursor: "pointer",
+            }}
           >
             Shop
-          </Link>
+          </a>
         </li>
 
         <li>

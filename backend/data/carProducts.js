@@ -8,6 +8,7 @@ const productsData = [
     miles: "12,500",
     year: "2020",
     rating: 4,
+    brand: "Tesla",
     description:
       "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
     countInStock: 15,
@@ -22,6 +23,7 @@ const productsData = [
     miles: "5,900",
     year: "2019",
     rating: 5,
+    brand: "Tesla",
     description:
       "Model X has the most storage room of any SUV in its class, comfortable seating for up to seven adults and the capability to tow up to 5,000 pounds. Falcon Wing doors are equipped with sensors to monitor the proximity of surroundings, and can open in even the tightest parking spaces.",
     countInStock: 10,
@@ -36,6 +38,7 @@ const productsData = [
     miles: "64,700",
     year: "2018",
     rating: 4,
+    brand: "Tesla",
     description:
       "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
     countInStock: 20,
@@ -50,6 +53,7 @@ const productsData = [
     miles: "89,900",
     year: "2020",
     rating: 3,
+    brand: "Toyota",
     description:
       "        The revamped exterior of the 2020 Edition warrants a double take. Blackout headlights, black badging and exclusive 17-in. black alloy wheels give it that statement-making edge.",
     countInStock: 4,
@@ -65,6 +69,7 @@ const productsData = [
     miles: "45,000",
     year: "2020",
     rating: 2,
+    brand: "Honda",
     description:
       "The Insight has plenty to swoon over, from its elegant design to its spacious cabin with brilliant finishes. And with available amenities like a power moonroof, heated front seats and remote engine start, the Insight is one seriously sophisticated hybrid",
     countInStock: 9,
@@ -78,6 +83,7 @@ const productsData = [
     miles: "57,400",
     year: "2019",
     rating: 4,
+    brand: "Audi",
     description:
       "Leave nothing to chance. When it comes to comfort, style, and dynamics, the redesigned Audi Q5 is the new benchmark – pioneering technology, expressive styling, and a powerful driving experience in one. There are no obstacles, only achievements.",
     countInStock: 5,
@@ -92,6 +98,7 @@ const productsData = [
     miles: "233,221",
     year: "2020",
     rating: 3,
+    brand: "Acura",
     description:
       "the first supercar powered by a bespoke Sport Hybrid Super Handling All-Wheel Drive™, 573-hp66 power unit that is an absolute game-changer. Engine power and direct electric torque combine for a new kind of dynamic performance, not just in acceleration, but in steering and braking too",
     countInStock: 12,
@@ -107,6 +114,7 @@ const productsData = [
     miles: "12,500",
     year: "2018",
     rating: 4,
+    brand: "BMW",
     description:
       "With dynamic looks, a spacious interior, and a body built to face the toughest challenges, the sporty and agile BMW X3 was designed for impulsive adventures",
     countInStock: 2,
@@ -121,6 +129,7 @@ const productsData = [
     miles: "58,600",
     year: "2019",
     rating: 5,
+    brand: "BMW",
     description:
       "The original 3 Series Sedan brought power, agility, and spirit to the everyday driver. In its seventh generation, that performance has only grown more pronounced",
     countInStock: 6,
@@ -135,6 +144,7 @@ const productsData = [
     miles: "12,674",
     year: "2021",
     rating: 4,
+    brand: "Hyundai",
     description:
       "Take your adventures farther in Kona Electric. With an EPA-estimated range of 258 miles with zero emissions, it has the highest of any all-electric subcompact SUV. And it’s loaded with intuitive tech like wireless device charging and Heads-up Display. Compromise is now a thing of the past",
     countInStock: 15,
@@ -145,10 +155,11 @@ const productsData = [
     car: "Nissan LEAF",
     image:
       "data:image/jpeg;base64,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",
-    price: "125,000",
+    price: "12,722",
     miles: "63,100",
     year: "2020",
     rating: 4,
+    brand: "Nissan",
     description:
       "Discover the instant acceleration, incredible range and nimble handling of the all-electric Nissan LEAF. Or, visit our benefits calculator page to see tax credits and incentives that may be available in your area and see how much you could potentially save by never buying fuel again",
     countInStock: 11,
@@ -163,6 +174,7 @@ const productsData = [
     miles: "59,900",
     year: "2019",
     rating: 2,
+    brand: "Toyota",
     description:
       "The transportation revolution continues. The powerful, stylish Camry Hybrid gives up nothing with its impressive fuel economy, advanced tech and stirring drive that will leave you breatheless",
     countInStock: 20,

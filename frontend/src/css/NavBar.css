@@ -39,6 +39,10 @@
   width: 40%;
 }
 
+.navbar__search input::placeholder {
+  font-style: italic;
+}
+
 .navbar__search button {
   border-radius: 0.5rem;
   border: none;

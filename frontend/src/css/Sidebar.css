@@ -5,3 +5,10 @@
 .filter__title {
   margin-top: 1.5rem;
 }
+
+.filter__title p {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}

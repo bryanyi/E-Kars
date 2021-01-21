@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 // ACTIONS
 import { addToCart } from "../redux/actions/cartActions";
 
-const Product = ({ car, carId, match, history }) => {
+const Product = ({ car, carId }) => {
   const [qty] = useState(1);
   const dispatch = useDispatch();
 

@@ -10,6 +10,7 @@ const Products = () => {
   const { products, loading, error } = cars;
 
   const searchedTerm = useSelector((state) => state.searched);
+  const { searchArray } = searchedTerm;
 
   return (
     <div className="Products-Comp">
@@ -30,11 +31,9 @@ const Products = () => {
               ) : (
                 products
                   .filter((product) => {
-                    if (searchedTerm === null || searchedTerm === "") {
+                    if (searchArray.length === 0 || searchArray === []) {
                       return product;
-                    } else if (
-                      product.tags.includes(searchedTerm.toLowerCase())
-                    ) {
+                    } else if (product.tags.includes(searchArray)) {
                       return product;
                     }
                   })
