@@ -1,21 +1,21 @@
-.Brands {
+.BrandsNavBar {
   background-color: #393e46;
 }
 
-.Brands ul {
+.BrandsNavBar ul {
   display: flex;
   justify-content: space-around;
   height: 1.5rem;
   margin: 0;
 }
 
-.Brands ul li {
+.BrandsNavBar ul li {
   list-style: none;
   cursor: pointer;
   color: white;
   transition: 0.5s;
 }
 
-.Brands ul li:hover {
+.BrandsNavBar ul li:hover {
   color: #00adb5;
 }

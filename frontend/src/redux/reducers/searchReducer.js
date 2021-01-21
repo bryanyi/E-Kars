@@ -4,7 +4,7 @@ export const searchReducer = (state = { searchArray: [] }, action) => {
   switch (action.type) {
     case actionTypes.SEARCH_FILTER:
       return {
-        searchArray: action.payload.target.value,
+        searchArray: action.payload.target.value.toLowerCase(),
       };
     case actionTypes.SEARCH_BRAND:
       return {

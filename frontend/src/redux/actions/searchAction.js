@@ -7,9 +7,9 @@ export const searchFilter = (searchTerm) => {
   };
 };
 
-export const searchBrand = (searchBrand) => {
+export const searchBrand = (searchClicked) => {
   return {
     type: actionTypes.SEARCH_BRAND,
-    payload: searchBrand,
+    payload: searchClicked,
   };
 };

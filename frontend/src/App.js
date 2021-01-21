@@ -6,7 +6,7 @@ import "./css/App.css";
 
 // COMPONENTS
 import Backdrop from "./components/Backdrop";
-import Brands from "./components/Brands";
+import BrandsNavBar from "./components/BrandsNavBar";
 import NavBar from "./components/NavBar";
 import SideDrawer from "./components/SideDrawer";
 
@@ -35,7 +35,7 @@ const App = () => {
         <NavBar click={() => setSideToggle(true)} />
         <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
         <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
-        <Brands />
+        <BrandsNavBar />
         <Switch>
           <Route path="/" exact component={HomeScreen} />
           <Route path="/cart" exact component={CartScreen} />
