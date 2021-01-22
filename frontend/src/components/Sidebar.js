@@ -7,34 +7,12 @@ const Sidebar = () => {
   const carElements = useSelector((state) => state.carElements);
   const { carBrands, carYears } = carElements;
 
-  const [searchSidebar, setSearchSidebar] = useState([]);
-
-  const checkboxHandler = (brand) => {
-    const currentIndex = searchSidebar.indexOf(brand);
-    const newChecked = [...searchSidebar];
-
-    if (currentIndex === -1) {
-      newChecked.push(brand);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
-    setSearchSidebar(newChecked);
-    console.log(searchSidebar);
-  };
-
   return (
     <div className="Sidebar">
       <div className="car__brands">
         <h1>Car Brands</h1>
         {carBrands.map((brand, index) => {
-          return (
-            <Checkbox
-              key={index}
-              brand={brand}
-              checkboxHandler={() => checkboxHandler(brand)}
-            />
-          );
+          return <Checkbox key={index} brand={brand} />;
         })}
       </div>
 
