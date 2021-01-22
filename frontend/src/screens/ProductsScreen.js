@@ -10,7 +10,7 @@ const Products = () => {
   const { products, loading, error } = cars;
 
   const searchedTerm = useSelector((state) => state.searched);
-  const { searchArray } = searchedTerm;
+  const { searchResult } = searchedTerm;
 
   return (
     <div className="Products-Comp">
@@ -31,9 +31,9 @@ const Products = () => {
               ) : (
                 products
                   .filter((product) => {
-                    if (searchArray.length === 0 || searchArray === []) {
+                    if (searchResult.length === 0) {
                       return product;
-                    } else if (product.tags.includes(searchArray)) {
+                    } else if (product.tags.includes(searchResult)) {
                       return product;
                     }
                   })
