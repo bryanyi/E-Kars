@@ -1,3 +1,3 @@
 export const SEARCH_FILTER = "SEARCH_FILTER";
-export const SEARCH_SIDEBAR = "SEARCH_SIDEBAR";
 export const SEARCH_BRAND = "SEARCH_BRAND";
+export const SEARCH_SIDEBAR = "SEARCH_SIDEBAR";

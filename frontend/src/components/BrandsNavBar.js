@@ -35,6 +35,14 @@ const BrandsNavBar = () => {
             </li>
           );
         })}
+        <li
+          onClick={() => {
+            history.push("/products");
+            history.go(0);
+          }}
+        >
+          All Cars
+        </li>
       </ul>
     </div>
   );

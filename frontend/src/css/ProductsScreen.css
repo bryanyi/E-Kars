@@ -94,4 +94,6 @@
 
 .loading {
   height: 100vh;
+  text-align: center;
+  margin: 4rem auto;
 }

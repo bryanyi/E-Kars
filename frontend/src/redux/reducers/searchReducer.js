@@ -10,6 +10,10 @@ export const searchReducer = (state = { searchResult: [] }, action) => {
       return {
         searchResult: action.payload,
       };
+    case actionTypes.SEARCH_SIDEBAR:
+      return {
+        searchResult: action.payload,
+      };
     default:
       return state;
   }

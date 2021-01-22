@@ -13,3 +13,10 @@ export const searchBrand = (searchClicked) => {
     payload: searchClicked,
   };
 };
+
+export const searchSidebar = (searchSidebarArray) => {
+  return {
+    type: actionTypes.SEARCH_SIDEBAR,
+    payload: searchSidebarArray,
+  };
+};
