@@ -39,9 +39,8 @@ const Products = () => {
                       return product;
                     } else if (product.tags.includes(searchResult)) {
                       return product;
-                    } else if (
-                      product.tags.some((el) => searchResult.includes(el))
-                    ) {
+                    }
+                    if (product.tags.some((el) => searchResult.includes(el))) {
                       return product;
                     }
                   })

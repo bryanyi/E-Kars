@@ -7,6 +7,7 @@ const Checkbox = ({ brand, checkboxSearch }) => {
         type="checkbox"
         name={brand}
         value={brand}
+        // for={brand}
         onChange={(e) => {
           checkboxSearch(e);
         }}
