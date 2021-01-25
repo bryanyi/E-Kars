@@ -11,6 +11,10 @@ const Products = () => {
 
   const searchedTerm = useSelector((state) => state.searched);
   const { searchResult } = searchedTerm;
+  console.log(
+    "productscreen.js: searchResult has a type of " + typeof searchResult
+  );
+  console.log("productscreen.js: " + searchResult);
 
   return (
     <div className="Products-Comp">
@@ -34,6 +38,10 @@ const Products = () => {
                     if (searchResult.length === 0) {
                       return product;
                     } else if (product.tags.includes(searchResult)) {
+                      return product;
+                    } else if (
+                      product.tags.some((el) => searchResult.includes(el))
+                    ) {
                       return product;
                     }
                   })

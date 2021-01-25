@@ -12,7 +12,7 @@ const productsData = [
     description:
       "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
     countInStock: 15,
-    tags: ["black", "tesla", "model", "s", "2020", 12500, 45000],
+    tags: ["black", "tesla", "model", "s", "2020"],
   },
   {
     id_: 2,
@@ -27,7 +27,7 @@ const productsData = [
     description:
       "Model X has the most storage room of any SUV in its class, comfortable seating for up to seven adults and the capability to tow up to 5,000 pounds. Falcon Wing doors are equipped with sensors to monitor the proximity of surroundings, and can open in even the tightest parking spaces.",
     countInStock: 10,
-    tags: ["white", "tesla", "model", "x", "2019", 49000, 5900],
+    tags: ["white", "tesla", "model", "x", "2019"],
   },
   {
     id_: 3,
@@ -42,7 +42,7 @@ const productsData = [
     description:
       "Model S is built from the ground up as an electric vehicle, with high-strength architecture and a floor-mounted battery pack allowing for incredible impact protection.",
     countInStock: 20,
-    tags: ["red", "tesla", "model", "s", "2018", 34000, 64700],
+    tags: ["red", "tesla", "model", "s", "2018"],
   },
   {
     id_: 4,
@@ -57,7 +57,7 @@ const productsData = [
     description:
       "        The revamped exterior of the 2020 Edition warrants a double take. Blackout headlights, black badging and exclusive 17-in. black alloy wheels give it that statement-making edge.",
     countInStock: 4,
-    tags: ["black", "toyota", "prius", "2020", 11000, 89900],
+    tags: ["black", "toyota", "prius", "2020"],
   },
 
   {
@@ -73,7 +73,7 @@ const productsData = [
     description:
       "The Insight has plenty to swoon over, from its elegant design to its spacious cabin with brilliant finishes. And with available amenities like a power moonroof, heated front seats and remote engine start, the Insight is one seriously sophisticated hybrid",
     countInStock: 9,
-    tags: ["white", "honda", "insight", "2020", 10500, 45000],
+    tags: ["white", "honda", "insight", "2020"],
   },
   {
     id_: 6,
@@ -87,7 +87,7 @@ const productsData = [
     description:
       "Leave nothing to chance. When it comes to comfort, style, and dynamics, the redesigned Audi Q5 is the new benchmark – pioneering technology, expressive styling, and a powerful driving experience in one. There are no obstacles, only achievements.",
     countInStock: 5,
-    tags: ["blue", "audi", "q5", "2019", 35500, 57400],
+    tags: ["blue", "audi", "q5", "2019"],
   },
   {
     id_: 7,
@@ -102,7 +102,7 @@ const productsData = [
     description:
       "the first supercar powered by a bespoke Sport Hybrid Super Handling All-Wheel Drive™, 573-hp66 power unit that is an absolute game-changer. Engine power and direct electric torque combine for a new kind of dynamic performance, not just in acceleration, but in steering and braking too",
     countInStock: 12,
-    tags: ["black", "acura", "mdx", "sport", "2020", 41500, 233211],
+    tags: ["black", "acura", "mdx", "sport", "2020"],
   },
 
   {
@@ -118,7 +118,7 @@ const productsData = [
     description:
       "With dynamic looks, a spacious interior, and a body built to face the toughest challenges, the sporty and agile BMW X3 was designed for impulsive adventures",
     countInStock: 2,
-    tags: ["bmw", "white", "x3", "2018", 35000, 12500],
+    tags: ["bmw", "white", "x3", "2018"],
   },
   {
     id_: 9,
@@ -133,7 +133,7 @@ const productsData = [
     description:
       "The original 3 Series Sedan brought power, agility, and spirit to the everyday driver. In its seventh generation, that performance has only grown more pronounced",
     countInStock: 6,
-    tags: ["white", "bmw", "2", "2019", 25500, 58600],
+    tags: ["white", "bmw", "2", "2019"],
   },
   {
     id_: 10,
@@ -148,7 +148,7 @@ const productsData = [
     description:
       "Take your adventures farther in Kona Electric. With an EPA-estimated range of 258 miles with zero emissions, it has the highest of any all-electric subcompact SUV. And it’s loaded with intuitive tech like wireless device charging and Heads-up Display. Compromise is now a thing of the past",
     countInStock: 15,
-    tags: ["blue", "hyundai", "kona", "electric", "2021", 25900, 12674],
+    tags: ["blue", "hyundai", "kona", "electric", "2021"],
   },
   {
     id_: 11,
@@ -163,7 +163,7 @@ const productsData = [
     description:
       "Discover the instant acceleration, incredible range and nimble handling of the all-electric Nissan LEAF. Or, visit our benefits calculator page to see tax credits and incentives that may be available in your area and see how much you could potentially save by never buying fuel again",
     countInStock: 11,
-    tags: ["white", "nissan", "leaf", "2020", 125000, 63100],
+    tags: ["white", "nissan", "leaf", "2020"],
   },
   {
     id_: 12,
@@ -178,16 +178,7 @@ const productsData = [
     description:
       "The transportation revolution continues. The powerful, stylish Camry Hybrid gives up nothing with its impressive fuel economy, advanced tech and stirring drive that will leave you breatheless",
     countInStock: 20,
-    tags: [
-      "black",
-      "silver",
-      "toyota",
-      "camry",
-      "hybrid",
-      "2019",
-      25500,
-      59900,
-    ],
+    tags: ["black", "silver", "toyota", "camry", "hybrid", "2019"],
   },
 ];
 

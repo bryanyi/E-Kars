@@ -24,8 +24,12 @@
   height: 410px;
 }
 
+.Products-Comp .car-info {
+  transition: 0.4s;
+}
+
 .Products-Comp .car-info:hover {
-  box-shadow: 12px 12px 2px 1px hsla(209, 100%, 50%, 0.445);
+  box-shadow: 10px 10px 2px 1px hsla(209, 100%, 50%, 0.2);
 }
 
 .Products-Comp .car-images {
@@ -42,10 +46,6 @@
 
 .Products-Comp .car-images img:hover {
   cursor: pointer;
-}
-
-.Products-Comp .car-info {
-  transition: 0.5s;
 }
 
 .Products-Comp .car-info .view-buttons {

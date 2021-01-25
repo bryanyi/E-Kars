@@ -7,11 +7,9 @@ import { useState } from "react";
 import { searchFilter } from "../redux/actions/searchAction";
 
 const NavBar = ({ click }) => {
-  const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
-
   const history = useHistory();
-
+  const [searchTerm, setSearchTerm] = useState("");
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
