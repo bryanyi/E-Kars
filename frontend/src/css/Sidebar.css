@@ -1,3 +1,18 @@
+.Sidebar .car__brands button {
+  outline: none;
+  border: none;
+  background-color: #00adb5;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  transition: 0.4s;
+}
+
+.Sidebar .car__brands button:hover {
+  background-color: #b5127a;
+}
+
 .filter__title {
   margin-top: 1.5rem;
 }
@@ -42,6 +57,7 @@
   color: #00adb5;
   font-weight: 400;
 }
+
 .field .value.left {
   left: 0px;
   bottom: 0px;

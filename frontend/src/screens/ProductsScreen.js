@@ -39,8 +39,8 @@ const Products = () => {
                     );
                     if (
                       searchResult.length === 0 &&
-                      sliderValue == 1000 &&
-                      ratingValue == null
+                      sliderValue === 1000 &&
+                      ratingValue === null
                     ) {
                       return product;
                     } else if (product.tags.includes(searchResult)) {

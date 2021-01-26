@@ -15,9 +15,10 @@ import {
 const Sidebar = () => {
   const [rating, setRating] = useState(null);
   const [sliderPrice, setSliderPrice] = useState(1000);
+  const [searchCheckbox, setSearchCheckbox] = useState([]);
+
   const carElements = useSelector((state) => state.carElements);
   const { carBrands, carYears } = carElements;
-  const [searchCheckbox, setSearchCheckbox] = useState([]);
 
   const dispatch = useDispatch();
   const history = useHistory();
