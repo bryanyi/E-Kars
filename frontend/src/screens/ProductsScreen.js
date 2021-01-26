@@ -13,6 +13,7 @@ const Products = () => {
   const { searchResult } = searchedTerm;
 
   const sliderValue = useSelector((state) => state.sliderValue);
+  const ratingValue = useSelector((state) => state.ratingValue);
 
   return (
     <div className="Products-Comp">
@@ -36,8 +37,11 @@ const Products = () => {
                     const productPrice = parseFloat(
                       product.price.replace(/,/g, "")
                     );
-
-                    if (searchResult.length === 0) {
+                    if (
+                      searchResult.length === 0 &&
+                      sliderValue == 1000 &&
+                      ratingValue == null
+                    ) {
                       return product;
                     } else if (product.tags.includes(searchResult)) {
                       return product;
@@ -45,13 +49,12 @@ const Products = () => {
                       product.tags.some((el) => searchResult.includes(el))
                     ) {
                       return product;
-                    }
-
-                    if (productPrice <= sliderValue) {
+                    } else if (productPrice <= sliderValue) {
+                      return product;
+                    } else if (product.rating == ratingValue) {
                       return product;
                     }
                   })
-
                   .map((car, index) => {
                     return (
                       <Col md={12} lg={6} xl={4} key={index}>

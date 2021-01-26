@@ -19,9 +19,14 @@
   background-color: #00adb5;
   border-radius: 0.5rem;
   padding: 0.3rem;
-  width: 30%;
+  width: 5rem;
   color: white;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.priceSlider .sliderValue span {
+  font-size: 100%;
+  padding: 0.2rem;
 }
 
 .field {
@@ -77,4 +82,14 @@
 }
 .priceSlider input::-moz-range-progress {
   background: #00adb5;
+}
+
+.car__rating p {
+  margin: 0.5rem 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.car__rating p:hover {
+  transform: translateX(15px);
 }

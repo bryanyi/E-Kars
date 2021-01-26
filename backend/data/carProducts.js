@@ -82,7 +82,7 @@ const productsData = [
     price: "35,500",
     miles: "57,400",
     year: "2019",
-    rating: 4,
+    rating: 1,
     brand: "Audi",
     description:
       "Leave nothing to chance. When it comes to comfort, style, and dynamics, the redesigned Audi Q5 is the new benchmark – pioneering technology, expressive styling, and a powerful driving experience in one. There are no obstacles, only achievements.",
@@ -143,7 +143,7 @@ const productsData = [
     price: "25,900",
     miles: "12,674",
     year: "2021",
-    rating: 4,
+    rating: 1,
     brand: "Hyundai",
     description:
       "Take your adventures farther in Kona Electric. With an EPA-estimated range of 258 miles with zero emissions, it has the highest of any all-electric subcompact SUV. And it’s loaded with intuitive tech like wireless device charging and Heads-up Display. Compromise is now a thing of the past",

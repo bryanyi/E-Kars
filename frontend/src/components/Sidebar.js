@@ -1,24 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import Checkbox from "../components/Checkbox";
 import CheckboxYear from "../components/CheckboxYear";
 import "../css/Sidebar.css";
 
 // ACTIONS
-import { searchSidebar } from "../redux/actions/searchAction";
-import { searchSliderFilter } from "../redux/actions/searchSliderAction";
+import {
+  searchCheckboxes,
+  searchSliderFilter,
+  searchRating,
+} from "../redux/actions/searchAction";
 
 const Sidebar = () => {
-  const [sliderPrice, setSliderPrice] = useState("");
+  const [rating, setRating] = useState(null);
+  const [sliderPrice, setSliderPrice] = useState(1000);
   const carElements = useSelector((state) => state.carElements);
   const { carBrands, carYears } = carElements;
   const [searchCheckbox, setSearchCheckbox] = useState([]);
+
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
-    dispatch(searchSidebar(searchCheckbox));
+    dispatch(searchCheckboxes(searchCheckbox));
     dispatch(searchSliderFilter(sliderPrice));
-  }, [searchCheckbox, sliderPrice]);
+    dispatch(searchRating(rating));
+  }, [searchCheckbox, rating, sliderPrice]);
 
   const checkboxSearch = (e) => {
     if (e.target.checked) {
@@ -44,9 +52,15 @@ const Sidebar = () => {
     }
   };
 
+  const priceSlider = (e) => {
+    const sliderValue = e.target.value;
+    setSliderPrice(sliderValue);
+  };
+
   return (
     <div className="Sidebar">
       <div className="car__brands">
+        <button onClick={() => history.go(0)}>Clear All Filters</button>
         <h5>Car Brands</h5>
         {carBrands.map((brand, index) => {
           return (
@@ -75,7 +89,7 @@ const Sidebar = () => {
       <div className="priceSlider filter__title">
         <h5>Price</h5>
         <div className="sliderValue">
-          <span>${sliderPrice || 0}</span>
+          <span>${sliderPrice}</span>
         </div>
         <div className="field">
           <div className="value left">$1,000</div>
@@ -84,9 +98,8 @@ const Sidebar = () => {
             min="1000"
             max="49000"
             step="50"
-            onInput={(e) => {
-              const value = e.target.value;
-              setSliderPrice(value);
+            onChange={(e) => {
+              priceSlider(e);
             }}
           />
           <div className="value right">$49,000</div>
@@ -95,11 +108,11 @@ const Sidebar = () => {
 
       <div className="car__rating filter__title">
         <h5>Avg. Customer Review</h5>
-        <p>⭐️</p>
-        <p>⭐️⭐️</p>
-        <p>⭐️⭐️⭐️</p>
-        <p>⭐️⭐️⭐️⭐</p>
-        <p>⭐️⭐️⭐️⭐️⭐️</p>
+        <p onClick={() => setRating(1)}>⭐️</p>
+        <p onClick={() => setRating(2)}>⭐️⭐️</p>
+        <p onClick={() => setRating(3)}>⭐️⭐️⭐️</p>
+        <p onClick={() => setRating(4)}>⭐️⭐️⭐️⭐</p>
+        <p onClick={() => setRating(5)}>⭐️⭐️⭐️⭐️⭐️</p>
       </div>
     </div>
   );
