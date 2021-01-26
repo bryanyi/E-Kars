@@ -11,10 +11,8 @@ const Products = () => {
 
   const searchedTerm = useSelector((state) => state.searched);
   const { searchResult } = searchedTerm;
-  console.log(
-    "productscreen.js: searchResult has a type of " + typeof searchResult
-  );
-  console.log("productscreen.js: " + searchResult);
+
+  const sliderValue = useSelector((state) => state.sliderValue);
 
   return (
     <div className="Products-Comp">
@@ -35,15 +33,25 @@ const Products = () => {
               ) : (
                 products
                   .filter((product) => {
+                    const productPrice = parseFloat(
+                      product.price.replace(/,/g, "")
+                    );
+
                     if (searchResult.length === 0) {
                       return product;
                     } else if (product.tags.includes(searchResult)) {
                       return product;
+                    } else if (
+                      product.tags.some((el) => searchResult.includes(el))
+                    ) {
+                      return product;
                     }
-                    if (product.tags.some((el) => searchResult.includes(el))) {
+
+                    if (productPrice <= sliderValue) {
                       return product;
                     }
                   })
+
                   .map((car, index) => {
                     return (
                       <Col md={12} lg={6} xl={4} key={index}>

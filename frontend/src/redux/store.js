@@ -4,6 +4,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 // REDUCERS
 import { searchReducer } from "./reducers/searchReducer";
+import { searchSliderReducer } from "./reducers/searchSliderReducer";
 import { carElements } from "./reducers/brandsReducer";
 import { cartReducer } from "./reducers/cartReducer";
 import {
@@ -17,6 +18,7 @@ const allReducers = combineReducers({
   cart: cartReducer,
   searched: searchReducer,
   carElements: carElements,
+  sliderValue: searchSliderReducer,
 });
 
 const middleware = [thunk];
