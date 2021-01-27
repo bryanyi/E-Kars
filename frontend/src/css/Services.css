@@ -1,5 +1,14 @@
-.Services-page .image img {
-  /* width: 70%; */
+.Services-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Services-section .image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Services-section .image-container img {
   display: block;
   max-width: 500px;
   max-height: 250px;
@@ -7,12 +16,40 @@
   height: auto;
 }
 
-.Services-page .description {
+.Services-section .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-.Services-page .description .para {
+.Services-section .description .para {
   text-align: start;
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+@media (max-width: 1080px) {
+  .Services-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .Services-section .image {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .Services-section {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .Services-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

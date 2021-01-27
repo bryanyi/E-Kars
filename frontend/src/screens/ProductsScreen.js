@@ -20,7 +20,11 @@ const Products = () => {
       <Container fluid>
         <Row>
           <Col sm={2} className="d-none d-lg-block side-column">
-            <div className="side-bar">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              className="side-bar"
+            >
               <Sidebar />
             </div>
           </Col>
@@ -57,7 +61,14 @@ const Products = () => {
                   })
                   .map((car, index) => {
                     return (
-                      <Col md={12} lg={6} xl={4} key={index}>
+                      <Col
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                        md={12}
+                        lg={6}
+                        xl={4}
+                        key={index}
+                      >
                         <Product key={car.id_} car={car} carId={car._id} />
                       </Col>
                     );

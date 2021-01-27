@@ -6,37 +6,43 @@ import "../css/Featured.css";
 function Featured() {
   return (
     <>
-      <div className="Featured" style={{ marginTop: "5rem" }}>
-        <Row style={{ margin: "0" }}>
-          <Col className="featured-divider">
-            <h1>Featured</h1>
-          </Col>
-        </Row>
+      <div className="Featured">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          className="featured-divider"
+        >
+          <h1>Featured</h1>
+        </div>
 
-        <Row style={{ margin: "0" }}>
-          <Col className="featured-picture d-flex justify-content-center align-items-center">
+        <div className="featured-car">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            className="featured-picture"
+          >
             <img src={redTesla} alt="redTesla" />
-          </Col>
+          </div>
 
-          <Col className="featured-text">
-            <div className="featured-car">
-              <h1>
-                <span>Red</span> Tesla Model S
-              </h1>
-              <div className="featured-car-desc">
-                <h5>$45,000</h5>
-                <h5>26,000 miles</h5>
-                <h5>Excellent Condition</h5>
-              </div>
-
-              <a href="/products">
-                <Button className="btn" variant="danger">
-                  View More Details
-                </Button>
-              </a>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            className="featured-car-desc"
+          >
+            <h1>
+              <span>Red</span> Tesla Model S
+            </h1>
+            <div className="featured-car_details">
+              <h5>$45,000</h5>
+              <h5>26,000 miles</h5>
+              <h5>Excellent Condition</h5>
             </div>
-          </Col>
-        </Row>
+
+            <a href="/products">
+              <button className="btn">View More Details</button>
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,20 @@
-.Featured .featured-text {
+.Featured {
+  margin-top: 5rem;
+}
+
+.Featured .featured-divider {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 4rem;
+}
+
+.Featured .featured-divider h1 {
+  font-size: 3em;
+  padding: 2rem;
+  border-bottom: 2px solid #00adb5;
+}
+
+.Featured .featured-car {
   background-color: #222831;
   color: white;
   text-align: center;
@@ -7,46 +23,55 @@
   justify-content: center;
 }
 
+.Featured .featured-picture {
+  flex: 0.5;
+}
+
 .Featured .featured-picture img {
   max-width: 100%;
 }
 
-.Featured .featured-divider {
+.Featured .featured-car {
   display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
 }
 
-.Featured .featured-divider h1 {
-  font-size: 3em;
-}
-
-.Featured .featured-divider h1::after {
-  content: "";
-  position: absolute;
-  bottom: -25px;
-  left: 825px;
-  right: 0;
-  width: 8%;
-  border-top: 4px solid #00adb5;
-  z-index: -1;
-}
-
-.Featured .featured-car span {
-  color: red;
-}
 .Featured .featured-car-desc {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.Featured .featured-car-desc .featured-car_details {
   display: flex;
   justify-content: space-around;
-  width: 600px;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
+}
+
+.Featured .featured-car-desc span {
+  color: red;
 }
 
 .Featured .btn {
   margin-top: 5rem;
+  padding: 1rem;
+  background-color: #dc3545;
+  color: white;
+}
+
+.Featured .btn button:hover {
+  opacity: 0.8;
 }
 
 .Featured .btn a {
   color: white;
   text-decoration: none;
+}
+
+@media (max-width: 940px) {
+  .Featured .featured-car {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

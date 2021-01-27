@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProducts } from "./redux/actions/productActions";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import aos from "aos";
+import "aos/dist/aos.css";
 import "./css/App.css";
 
 // COMPONENTS
@@ -27,6 +29,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
+    aos.init();
   }, [dispatch]);
 
   return (
