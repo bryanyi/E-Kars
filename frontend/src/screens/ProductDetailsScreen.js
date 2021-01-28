@@ -41,7 +41,7 @@ const ProductDetailsScreen = ({ match, history }) => {
               <p className="left__name">{product.car}</p>
               <p>Price: ${product.price}</p>
               <div className="car__rating">
-                Rating:{"    "}
+                Rating:
                 {Array(product.rating)
                   .fill()
                   .map((_, i) => {
@@ -60,7 +60,7 @@ const ProductDetailsScreen = ({ match, history }) => {
                 Price: <span>${product.price}</span>
               </p>
               <p>
-                Status:{" "}
+                Status:
                 <span>
                   {product.countInStock > 0 ? "In Stock" : "Out of Stock!"}
                 </span>

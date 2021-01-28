@@ -106,6 +106,6 @@
   cursor: pointer;
 }
 
-.car__rating p:hover {
+.Sidebar .car__rating p:hover {
   transform: translateX(15px);
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Sidebar from "../components/Sidebar";
 import { Container, Col, Row } from "react-bootstrap";
@@ -6,14 +6,13 @@ import Product from "../components/Product";
 import "../css/ProductsScreen.css";
 
 const Products = () => {
-  const cars = useSelector((state) => state.getProducts);
-  const { products, loading, error } = cars;
-
-  const searchedTerm = useSelector((state) => state.searched);
-  const { searchResult } = searchedTerm;
-
+  // PULL DATA FROM REDUX
   const sliderValue = useSelector((state) => state.sliderValue);
   const ratingValue = useSelector((state) => state.ratingValue);
+  const cars = useSelector((state) => state.getProducts);
+  const { products, loading, error } = cars;
+  const searchedTerm = useSelector((state) => state.searched);
+  const { searchResult } = searchedTerm;
 
   return (
     <div className="Products-Comp">

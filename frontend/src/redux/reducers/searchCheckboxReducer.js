@@ -4,7 +4,7 @@ export const searchReducer = (state = { searchResult: [] }, action) => {
   switch (action.type) {
     case actionTypes.SEARCH_NAVBAR:
       return {
-        searchResult: action.payload.target.value.toLowerCase(),
+        searchResult: action.payload.target.value.toLowerCase() || null,
       };
     case actionTypes.SEARCH_BRAND_NAVBAR:
       return {

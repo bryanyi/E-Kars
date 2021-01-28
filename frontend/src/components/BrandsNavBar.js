@@ -19,7 +19,7 @@ const BrandsNavBar = () => {
     }
   }, [searchClicked]);
   return (
-    <div className="BrandsNavBar">
+    <div className="BrandsNavBar" data-aos="fade-in" data-aos-duration="4000">
       <ul onClick={() => console.log("ul")}>
         {carBrands.map((brand, index) => {
           return (

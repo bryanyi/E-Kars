@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 1rem 3rem 0 3rem;
 }
 .Landing-page .description {
   flex: 0.5;

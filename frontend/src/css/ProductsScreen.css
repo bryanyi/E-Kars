@@ -29,7 +29,7 @@
 }
 
 .Products-Comp .car-info:hover {
-  box-shadow: 10px 10px 2px 1px hsla(209, 100%, 50%, 0.2);
+  box-shadow: 7px 7px 2px 1px rgb(23, 23, 23, 0.7);
 }
 
 .Products-Comp .car-images {
