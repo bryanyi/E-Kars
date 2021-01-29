@@ -108,7 +108,7 @@ const Sidebar = () => {
       </div>
 
       <div className="car__rating filter__title">
-        <h5>Avg. Customer Review</h5>
+        <h5>Rating</h5>
         <p onClick={() => setRating(1)}>⭐️</p>
         <p onClick={() => setRating(2)}>⭐️⭐️</p>
         <p onClick={() => setRating(3)}>⭐️⭐️⭐️</p>
