@@ -12,7 +12,7 @@ const BrandsNavBar = () => {
   const history = useHistory();
 
   useEffect(() => {
-    if (searchClicked === "" || searchClicked === null) {
+    if (searchClicked === "") {
       return;
     } else {
       dispatch(searchBrand(searchClicked));
