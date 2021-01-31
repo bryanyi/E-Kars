@@ -1,7 +1,5 @@
 # E-Kars: The Amazon of Used Electric Cars
 
-Add Gif Here
-
 ## Tools Used
 
 React.js, Redux, Node.js/Express, MongoDB, SendGrid, Stripe
