@@ -22,7 +22,7 @@ To get the project up and running, and view components in the browser, complete 
 4. Start the development environment: `npm run dev`
 5. Open your browser and visit <http://localhost:3000>
 
-## LOGIN with my test account
+## LOGIN with my test account. ID: bryanyi1206@gmail.com PW: 123456
 
 ![Ekars Login](readMeImages/ekars_login.png)
 Feel free to browse with the intention of buying a few cars. Upon proceeding to checkout, you will be asked to login before being allowed to proceed with the purchase.
