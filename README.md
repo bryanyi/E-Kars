@@ -1,6 +1,6 @@
 # E-Kars: The Amazon of Used Electric Cars
 
-![E-Kars Demo](readMeImages/ekar_gif_1.gif)
+![E-Kars Demo](readMeImages/ekars_gif_1.gif)
 _E-Kars General Demo_
 
 ![E-Kars Stripe](readMeImages/ekars_stripe.gif)
@@ -24,8 +24,12 @@ To get the project up and running, and view components in the browser, complete 
 
 ## LOGIN with my test account
 
+![Ekars Login](ekars_login.png)
 Feel free to browse with the intention of buying a few cars. Upon proceeding to checkout, you will be asked to login before being allowed to proceed with the purchase.
 You can use my ID & PW for testing. However, if you want to see what the "forgot password" workflow is like, you can register your own email, or refer to the gif!
 
 `ID: Bryanyi1206@gmail.com`
 `PW:123456`
+
+![E-Kars Forgot Password Workflow](readMeImages/ekars_forgotpassword.gif)
+_E-Kars Stripe Payment Demo_
