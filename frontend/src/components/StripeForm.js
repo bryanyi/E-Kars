@@ -97,7 +97,7 @@ const StripeForm = ({ getCartCount, getCartSubtotal }) => {
 
   return (
     <div className="stripeform">
-      <form id="payment-form" onSubmit={handleSubmit}>
+      <form id="payment-form" onSubmit={handleSubmit} autoComplete="off">
         <label htmlFor="name">Your Name</label>
         <input
           type="text"
