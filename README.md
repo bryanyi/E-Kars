@@ -6,7 +6,7 @@ _E-Kars General Demo_
 ![E-Kars Stripe](readMeImages/ekars_stripe.gif)
 _E-Kars Stripe Payment Demo_
 
-E-Kars is a full-stack ecommerce project that sells used electric cars through an interface that is similar to Amazon.com. Features include full user authentication (register, login, and forgotpassword with SendGrid), Stripe payment system, and Redux for state management.
+E-Kars is a full-stack (hypothetical) ecommerce project that sells used electric cars through an interface that is similar to Amazon.com. Features include full user authentication (register, login, and forgotpassword with SendGrid), Stripe payment system, and Redux for state management.
 
 ## Technologies Used
 
@@ -22,7 +22,7 @@ To get the project up and running, and view components in the browser, complete 
 4. Start the development environment: `npm run dev`
 5. Open your browser and visit <http://localhost:3000>
 
-## LOGIN with my test account. ID: bryanyi1206@gmail.com PW: 123456
+## LOGIN with my test account.
 
 ![Ekars Login](readMeImages/ekars_login.png)
 Feel free to browse with the intention of buying a few cars. Upon proceeding to checkout, you will be asked to login before being allowed to proceed with the purchase.
