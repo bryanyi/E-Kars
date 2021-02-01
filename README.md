@@ -1,10 +1,10 @@
 # E-Kars: The Amazon of Used Electric Cars
 
 ![E-Kars Demo](readMeImages/ekar_gif_1.gif)
-\_E-Kars General Demo
+_E-Kars General Demo_
 
 ![E-Kars Stripe](readMeImages/ekars_stripe.gif)
-\_E-Kars Stripe Payment Demo
+_E-Kars Stripe Payment Demo_
 
 E-Kars is a full-stack ecommerce project that sells used electric cars through an interface that is similar to Amazon.com. Features include full user authentication (register, login, and forgotpassword with SendGrid), Stripe payment system, and Redux for state management.
 
