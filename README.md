@@ -9,12 +9,7 @@ _E-Kars Stripe Payment Demo_
 
 ## Technologies Used
 
-React.js
-Redux
-Node.js/Express
-MongoDB
-SendGrid
-Stripe
+React.js, Redux, Node.js/Express, MongoDB, SendGrid, Stripe
 
 ## Getting Started
 
