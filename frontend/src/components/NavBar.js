@@ -39,7 +39,7 @@ const NavBar = ({ click }) => {
         <input
           className="navbar__input"
           type="search"
-          placeholder="Search Tesla, BMW, Audi, 2021..."
+          placeholder="Search Tesla, BMW, Audi, 2021, or click a brand below"
           onChange={setSearchTerm}
         />
 

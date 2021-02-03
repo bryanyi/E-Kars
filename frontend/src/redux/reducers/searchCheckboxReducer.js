@@ -1,18 +1,13 @@
 import * as actionTypes from "../constants/searchConstant";
 
-export const searchReducer = (state = { searchResult: [] }, action) => {
+export const searchCheckboxReducer = (
+  state = { searchCheckbox: [] },
+  action
+) => {
   switch (action.type) {
-    case actionTypes.SEARCH_NAVBAR:
-      return {
-        searchResult: action.payload.target.value.toLowerCase() || null,
-      };
-    case actionTypes.SEARCH_BRAND_NAVBAR:
-      return {
-        searchResult: action.payload,
-      };
     case actionTypes.SEARCH_CHECKBOX:
       return {
-        searchResult: action.payload,
+        searchCheckbox: action.payload,
       };
     default:
       return state;

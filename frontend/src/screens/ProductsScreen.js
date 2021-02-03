@@ -11,8 +11,11 @@ const Products = () => {
   const ratingValue = useSelector((state) => state.ratingValue);
   const cars = useSelector((state) => state.getProducts);
   const { products, loading, error } = cars;
-  const searchedTerm = useSelector((state) => state.searched);
-  const { searchResult } = searchedTerm;
+  const searchedNavReducer = useSelector((state) => state.searchNav);
+  const { searchNav } = searchedNavReducer;
+  const searchCheckboxReducer = useSelector((state) => state.searchCheckbox);
+  const { searchCheckbox } = searchCheckboxReducer;
+  console.log(searchCheckbox);
 
   return (
     <div className="Products-Comp">
@@ -41,15 +44,16 @@ const Products = () => {
                       product.price.replace(/,/g, "")
                     );
                     if (
-                      searchResult.length === 0 &&
+                      searchNav.length === 0 &&
                       sliderValue === 1000 &&
-                      ratingValue === null
+                      ratingValue === null &&
+                      searchCheckbox.length === 0
                     ) {
                       return product;
-                    } else if (product.tags.includes(searchResult)) {
+                    } else if (product.tags.includes(searchNav)) {
                       return product;
                     } else if (
-                      product.tags.some((el) => searchResult.includes(el))
+                      product.tags.some((el) => searchCheckbox.includes(el))
                     ) {
                       return product;
                     } else if (productPrice <= sliderValue) {

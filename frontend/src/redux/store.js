@@ -3,7 +3,8 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 // REDUCERS
-import { searchReducer } from "./reducers/searchCheckboxReducer";
+import { searchCheckboxReducer } from "./reducers/searchCheckboxReducer";
+import { searchNavReducer } from "./reducers/searchNavReducer";
 import { searchByReviewReducer } from "./reducers/searchByReviewReducer";
 import { searchSliderReducer } from "./reducers/searchSliderReducer";
 import { carElements } from "./reducers/brandsReducer";
@@ -18,9 +19,10 @@ const allReducers = combineReducers({
   getProductDetails: getProductDetailsReducer,
   cart: cartReducer,
   carElements: carElements,
-  searched: searchReducer,
+  searchCheckbox: searchCheckboxReducer,
   sliderValue: searchSliderReducer,
   ratingValue: searchByReviewReducer,
+  searchNav: searchNavReducer,
 });
 
 const middleware = [thunk];
