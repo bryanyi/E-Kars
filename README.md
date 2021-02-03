@@ -10,6 +10,7 @@ On the products page, you can place multiple filters with the sidebar on the lef
 ![E-Kars Demo](readMeImages/ekars_productsPage.gif)
 
 I created a custom form using Stripe to check out. However, to get to this page, you must be logged in first. See below to use my test account!
+
 ![E-Kars Stripe](readMeImages/ekars_stripe_checkout2.gif)
 _E-Kars Stripe Payment Demo_
 
@@ -30,6 +31,7 @@ To get the project up and running, complete the following steps:
 ## LOGIN with my test account.
 
 ![Ekars Login](readMeImages/ekars_login.png)
+
 Feel free to browse with the intention of buying a few cars. Upon proceeding to checkout, you will be asked to login before being allowed to proceed with the purchase.
 You can use my ID & PW for testing. However, if you want to see what the "forgot password" workflow is like, you can register your own email, or refer to the gif below!
 
