@@ -4,7 +4,7 @@ E-Kars is a full-stack (hypothetical) ecommerce project that sells used electric
 ![E-Kars Demo](readMeImages/ekars_gif_1.gif)
 _E-Kars General Demo_
 
-![E-Kars Stripe](readMeImages/ekars_stripe.gif)
+![E-Kars Stripe](readMeImages/ekars_stripe_checkout2.gif)
 _E-Kars Stripe Payment Demo_
 
 ## Technologies Used
