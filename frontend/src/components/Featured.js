@@ -7,17 +7,13 @@ function Featured() {
   return (
     <>
       <div className="Featured">
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          className="featured-divider"
-        >
+        <div className="featured-divider">
           <h1>Featured</h1>
         </div>
 
         <div className="featured-car">
           <div
-            data-aos="fade-right"
+            data-aos="fade-in"
             data-aos-duration="2000"
             className="featured-picture"
           >
