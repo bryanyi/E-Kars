@@ -5,7 +5,7 @@ import "../css/LoadingComponent.css";
 const LoadingComponent = () => {
   const { containerProps, indicatorEl } = useLoading({
     loading: true,
-    indicator: <Grid width="80" />,
+    indicator: <Grid width="100" />,
   });
 
   return (
