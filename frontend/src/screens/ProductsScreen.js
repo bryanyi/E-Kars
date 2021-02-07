@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import Sidebar from "../components/Sidebar";
 import { Container, Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
+import LoadingComponent from "../components/LoadingComponent";
 import "../css/ProductsScreen.css";
 
 const Products = () => {
@@ -15,7 +16,6 @@ const Products = () => {
   const { searchNav } = searchedNavReducer;
   const searchCheckboxReducer = useSelector((state) => state.searchCheckbox);
   const { searchCheckbox } = searchCheckboxReducer;
-  console.log(searchCheckbox);
 
   return (
     <div className="Products-Comp">
@@ -34,8 +34,9 @@ const Products = () => {
           <Col>
             <Row className="CarsDisplay">
               {loading ? (
-                <h1 className="loading">LOADING CARS...</h1>
-              ) : error ? (
+                <LoadingComponent />
+              ) : // <h1 className="loading">LOADING CARS...</h1>
+              error ? (
                 <h2>Error has occurred. Details here: {error}</h2>
               ) : (
                 products
