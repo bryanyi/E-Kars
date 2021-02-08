@@ -8,11 +8,13 @@ import "../css/CartScreen.css";
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 
 const CartScreen = () => {
+  const dispatch = useDispatch();
+
+  // GRAB STATE FROM REDUX
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const dispatch = useDispatch();
-
+  // HANDLERS
   const qtyChangeHandler = (id, qty) => {
     dispatch(addToCart(id, qty));
   };

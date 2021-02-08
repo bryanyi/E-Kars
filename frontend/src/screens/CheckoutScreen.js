@@ -11,14 +11,17 @@ import "../css/CheckoutScreen.css";
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 
 const CheckoutScreen = () => {
+  const dispatch = useDispatch();
+
+  // GRAB STATE FROM REDUX
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  // STRIPE PUBLIC KEY
   const promise = loadStripe(
     "pk_test_51IB9neGLr0tK0DNBL6eaLAgYioTBHoA50xBnStGSLIhe1LgAtDP6p0SiY5KSmpekgmHOZvFC2z0c5M93oRJHAPMU0005GdbnHi"
   );
 
-  const dispatch = useDispatch();
-
+  // HANDLERS
   const qtyChangeHandler = (id, qty) => {
     dispatch(addToCart(id, qty));
   };

@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import FeaturedImage from "../images/white_tesla.png";
 import Featured from "../components/Featured";
 import Services from "../components/Services";
-
 import "../css/HomeScreen.css";
-import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
