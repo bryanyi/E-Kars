@@ -24,8 +24,8 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ResetPasswordScreen from "./screens/ResetPasswordScreen";
 
 const App = () => {
-  const [sideToggle, setSideToggle] = useState(false);
   const dispatch = useDispatch();
+  const [sideToggle, setSideToggle] = useState(false);
 
   useEffect(() => {
     dispatch(fetchProducts());

@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Sidebar from "../components/Sidebar";
 import { Container, Col, Row } from "react-bootstrap";
+import Sidebar from "../components/Sidebar";
 import Product from "../components/Product";
 import LoadingComponent from "../components/LoadingComponent";
 import "../css/ProductsScreen.css";

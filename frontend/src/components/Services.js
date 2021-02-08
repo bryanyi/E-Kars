@@ -4,7 +4,7 @@ import undrawReviews from "../images/undraw_Reviews.png";
 import undrawReturns from "../images/undraw_Returns.png";
 import "../css/Services.css";
 
-function Services() {
+const Services = () => {
   return (
     <div
       data-aos="fade-up"
@@ -54,6 +54,6 @@ function Services() {
       </div>
     </div>
   );
-}
+};
 
 export default Services;

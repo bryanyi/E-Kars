@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import "../css/Brands.css";
 import { searchBrand } from "../redux/actions/searchAction";
+import "../css/Brands.css";
 
 const BrandsNavBar = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const [searchClicked, setSearchClicked] = useState("");
   const carElements = useSelector((state) => state.carElements);
   const { carBrands } = carElements;
-  const dispatch = useDispatch();
-  const history = useHistory();
 
   useEffect(() => {
     if (searchClicked === "") {

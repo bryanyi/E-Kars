@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row, Button } from "react-bootstrap";
 import redTesla from "../images/red_tesla.png";
 import "../css/Featured.css";
 

@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "../css/NavBar.css";
-import { useState } from "react";
 
-// ACTION
+// ACTIONS
 import { searchFilter } from "../redux/actions/searchAction";
 
 const NavBar = ({ click }) => {
