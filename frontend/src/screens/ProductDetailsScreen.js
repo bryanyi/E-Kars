@@ -7,10 +7,11 @@ import "../css/ProductDetailsScreen.css";
 import { getProductDetails } from "../redux/actions/productActions";
 import { addToCart } from "../redux/actions/cartActions";
 
-const ProductDetailsScreen = ({ match, history }) => {
-  const [qty, setQty] = useState(1);
+const ProductDetailsScreen = ({ match }) => {
   const dispatch = useDispatch();
+  const [qty, setQty] = useState(1);
 
+  // PULLING STATE FROM REDUX
   const productDetails = useSelector((state) => state.getProductDetails);
   const { product, loading, error } = productDetails;
 

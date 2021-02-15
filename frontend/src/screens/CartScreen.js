@@ -44,7 +44,7 @@ const CartScreen = () => {
         </Link>
         {cartItems.length === 0 ? (
           <div>
-            Your cart is empty <Link to="/products">Go Back</Link>
+            Your cart is empty! <Link to="/products">Go Back</Link>
           </div>
         ) : (
           cartItems.map((item) => {

@@ -4,11 +4,9 @@ import axios from "axios";
 import "../css/LoginScreen.css";
 
 const LoginScreen = ({ history }) => {
+  const usehistory = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const usehistory = useHistory();
-
   const [error, setError] = useState("");
 
   useEffect(() => {
