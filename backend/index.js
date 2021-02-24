@@ -1,3 +1,4 @@
+require("dotenv");
 require("dotenv").config({ path: "./config.env" });
 const cors = require("cors");
 require("./models/User");
