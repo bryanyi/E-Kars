@@ -2,7 +2,7 @@
   "name": "e-kars",
   "version": "1.0.0",
   "description": "Used electric cars",
-  "engine": {
+  "engines": {
     "node": "12.18.3",
     "npm": "6.14.8"
   },
