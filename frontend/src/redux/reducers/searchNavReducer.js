@@ -6,7 +6,7 @@ export const searchNavReducer = (state = { searchNav: [] }, action) => {
       return {
         searchNav:
           action.payload.target == undefined
-            ? " "
+            ? ""
             : action.payload.target.value.toLowerCase(),
       };
     case actionTypes.SEARCH_BRAND_NAVBAR:
