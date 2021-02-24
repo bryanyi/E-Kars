@@ -9,6 +9,7 @@ node_modules/
 
 # production
 /frontend/build
+dev.js
 
 # misc
 .DS_Store
