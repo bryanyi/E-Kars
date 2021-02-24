@@ -16,6 +16,15 @@ app.use("/api/private", require("./routes/privateRoutes"));
 app.use("/api/stripe", require("./routes/paymentRoutes"));
 app.use(errorHandler);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(
+      path.resolve(__dirname, ".../frontend", "build", "index.html")
+    );
+  });
+}
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

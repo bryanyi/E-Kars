@@ -2,13 +2,18 @@
   "name": "e-kars",
   "version": "1.0.0",
   "description": "Used electric cars",
+  "engine": {
+    "node": "12.18.3",
+    "npm": "6.14.8"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seederScript.js"
+    "data:import": "node backend/seederScript.js",
+    "heroku-postbuild": " npm install --prefix frontend && npm run build --prefix frontend  "
   },
   "author": "Bryan Yi",
   "license": "ISC",
