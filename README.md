@@ -37,7 +37,7 @@ To get the project up and running, complete the following steps:
 Feel free to browse with the intention of buying a few cars. Upon proceeding to checkout, you will be asked to login before being allowed to proceed with the purchase.
 You can use my ID & PW for testing. However, if you want to see what the "forgot password" workflow is like, you can register your own email, or refer to the gif below!
 
-`ID: Bryanyi1206@gmail.com`
+`ID: bryancodes@gmail.com`
 `PW:123456`
 
 ![E-Kars Forgot Password Workflow](images/ekars_forgotpassword.gif)
