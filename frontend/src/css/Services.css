@@ -41,15 +41,31 @@
   }
 }
 
-@media (max-width: 900px) {
-  .Services-section {
-    margin-top: 6rem;
-  }
-}
-
 @media (max-width: 720px) {
   .Services-section {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 410px) {
+  .Services-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .Services-section .Service-column {
+    width: 70%;
+  }
+  .Services-section .image-container img {
+    width: 100%;
+  }
+  .Services-section .description h1 {
+    font-size: 1.5rem;
+  }
+  .Services-section .description p {
+    font-size: 0.8rem;
   }
 }

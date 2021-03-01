@@ -24,7 +24,6 @@
 }
 
 .navbar__search {
-  /* width: 70%; */
   display: flex;
   justify-content: center;
   flex: 1 1 auto;
@@ -50,7 +49,6 @@
   padding: 0.5rem;
   margin-left: 1rem;
   background-color: white;
-  /* width: 5rem; */
   transition: 0.5s;
 }
 
@@ -145,5 +143,27 @@
 @media (max-width: 500px) {
   .navbar_logo h2 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 427px) {
+  .navbar {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 411px) {
+  .navbar .navbar_logo {
+    display: none;
+  }
+}
+
+@media (max-width: 329px) {
+  .navbar__search input {
+    width: 20%;
+  }
+
+  .navbar__search {
+    width: 50%;
   }
 }

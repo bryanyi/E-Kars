@@ -19,3 +19,9 @@
 .BrandsNavBar ul li:hover {
   color: #00adb5;
 }
+
+@media (max-width: 580px) {
+  .BrandsNavBar {
+    display: none;
+  }
+}
