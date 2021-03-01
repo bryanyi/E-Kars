@@ -141,20 +141,14 @@
 }
 
 @media (max-width: 500px) {
-  .navbar_logo h2 {
-    font-size: 1rem;
+  .navbar .navbar_logo {
+    display: none;
   }
 }
 
 @media (max-width: 427px) {
   .navbar {
     padding: 0 0.5rem;
-  }
-}
-
-@media (max-width: 411px) {
-  .navbar .navbar_logo {
-    display: none;
   }
 }
 
