@@ -5,11 +5,15 @@
 E-Kars is a (hypothetical) e-Commerce project that sells used electric cars. Features include full user authentication (register, login, and forgotpassword with SendGrid), Stripe payment system, and Redux for state management.
 
 ![E-Kars Demo](images/ekars_gif_1.gif)
-_E-Kars General Demo_
+_E-Kars Overview_
+
+![E-Kars Home Page](images/ekars_homepage.gif)
+_E-Kars Home Page_
 
 On the products page, you can place multiple filters with the sidebar on the left. Using Redux was extremely useful in order to pass multiple levels of state between each React component.
 
 ![E-Kars Demo](images/ekars_productsPage.gif)
+_E-Kars Product Page_
 
 I created a custom form using Stripe for check out. However, to get to this page, you must be logged in first. See below to use my test account!
 
