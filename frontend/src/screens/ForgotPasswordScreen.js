@@ -47,7 +47,6 @@ const ForgotPasswordScreen = () => {
             Please enter the email address you registered your account with. A
             link will be sent to reset your password.
           </p>
-          {/* <label htmlFor="email">Email:</label> */}
           <input
             type="email"
             required

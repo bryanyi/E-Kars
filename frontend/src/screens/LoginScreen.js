@@ -52,7 +52,6 @@ const LoginScreen = ({ history }) => {
         )}
 
         <div className="form-group">
-          {/* <label htmlFor="email">Email:</label> */}
           <input
             type="email"
             required
@@ -66,8 +65,6 @@ const LoginScreen = ({ history }) => {
         </div>
 
         <div className="form-group">
-          {/* <label htmlFor="password">Password:</label> */}
-
           <input
             type="password"
             required

@@ -35,8 +35,7 @@ const Products = () => {
             <Row className="CarsDisplay">
               {loading ? (
                 <LoadingComponent />
-              ) : // <h1 className="loading">LOADING CARS...</h1>
-              error ? (
+              ) : error ? (
                 <h2>Error has occurred. Details here: {error}</h2>
               ) : (
                 products
