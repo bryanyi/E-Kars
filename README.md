@@ -2,7 +2,7 @@
 
 ## [LIVE LINK](https://e-kars.herokuapp.com/)
 
-E-Kars is a (hypothetical) e-Commerce project that sells used electric cars. Features include full user authentication (register, login, and forgotpassword with SendGrid), Stripe payment system, and Redux for state management.
+E-Kars is a (hypothetical) e-Commerce project that sells used electric cars. Features include full user authentication (register, login, and forgotpassword with Nodemailer), Stripe payment system, and Redux for state management.
 
 ![E-Kars Demo](images/ekars_gif_1.gif)
 _E-Kars Overview_
@@ -22,7 +22,7 @@ _E-Kars Stripe Payment Demo_
 
 ## Technologies Used
 
-React.js, Redux, Node.js/Express, MongoDB/Mongoose, SendGrid, Stripe
+React.js, Redux, Node.js/Express, MongoDB/Mongoose, Stripe, Nodemailer
 
 ## Getting Started
 
