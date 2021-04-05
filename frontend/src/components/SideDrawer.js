@@ -25,10 +25,6 @@ const SideDrawer = ({ show, click }) => {
         </li>
 
         <li>
-          <Link to="/account">Your Account</Link>
-        </li>
-
-        <li>
           <Link to="/products">Shop Cars</Link>
         </li>
 
